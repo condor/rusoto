@@ -11,6 +11,7 @@
 
     <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
     <link rel="stylesheet" type="text/css" href="../../main.css">
+    
 
     
     
@@ -43,40 +44,36 @@
 
     <section id='main' class="content struct">
 <h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>rusoto</a>::<wbr><a href='index.html'>dynamodb</a>::<wbr><a class='struct' href=''>LocalSecondaryIndexDescription</a></span><span class='out-of-band'><span id='render-detail'>
-            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
-                [<span class='inner'>&#x2212;</span>]
-            </a>
-        </span><a id='src-8126' class='srclink' href='../../src/rusoto///Users/jimmy/Code/rusoto/target/debug/build/rusoto-27b53b229e74877b/out/dynamodb.rs.html#15687-15704' title='goto source code'>[src]</a></span></h1>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-6241' class='srclink' href='../../src/rusoto/home/adimarco/code/rusoto/target/debug/build/rusoto-9b092785f15fdaf7/out/dynamodb.rs.html#11135-11157' title='goto source code'>[src]</a></span></h1>
 <pre class='rust struct'>pub struct LocalSecondaryIndexDescription {
-    pub IndexSizeBytes: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/dynamodb/type.Long.html' title='rusoto::dynamodb::Long'>Long</a>&gt;,
-    pub IndexName: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/dynamodb/type.IndexName.html' title='rusoto::dynamodb::IndexName'>IndexName</a>&gt;,
-    pub Projection: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../rusoto/dynamodb/struct.Projection.html' title='rusoto::dynamodb::Projection'>Projection</a>&gt;,
-    pub IndexArn: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;,
-    pub KeySchema: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/dynamodb/type.KeySchema.html' title='rusoto::dynamodb::KeySchema'>KeySchema</a>&gt;,
-    pub ItemCount: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/dynamodb/type.Long.html' title='rusoto::dynamodb::Long'>Long</a>&gt;,
+    pub index_arn: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;,
+    pub index_name: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/dynamodb/type.IndexName.html' title='rusoto::dynamodb::IndexName'>IndexName</a>&gt;,
+    pub index_size_bytes: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/dynamodb/type.Long.html' title='rusoto::dynamodb::Long'>Long</a>&gt;,
+    pub item_count: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/dynamodb/type.Long.html' title='rusoto::dynamodb::Long'>Long</a>&gt;,
+    pub key_schema: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/dynamodb/type.KeySchema.html' title='rusoto::dynamodb::KeySchema'>KeySchema</a>&gt;,
+    pub projection: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../rusoto/dynamodb/struct.Projection.html' title='rusoto::dynamodb::Projection'>Projection</a>&gt;,
 }</pre><div class='docblock'><p>Represents the properties of a local secondary index.</p>
-</div><h2 class='fields'>Fields</h2>
-<table><tr class='stab '>
-                                  <td id='structfield.IndexSizeBytes'><code>IndexSizeBytes</code></td><td><div class='docblock'><p>The total size of the specified index, in bytes. DynamoDB updates this value
-approximately every six hours. Recent changes might not be reflected in this
-value.</p>
-</div></td></tr><tr class='stab '>
-                                  <td id='structfield.IndexName'><code>IndexName</code></td><td><div class='docblock'><p>Represents the name of the local secondary index.</p>
-</div></td></tr><tr class='stab '>
-                                  <td id='structfield.Projection'><code>Projection</code></td><td></td></tr><tr class='stab '>
-                                  <td id='structfield.IndexArn'><code>IndexArn</code></td><td><div class='docblock'><p>The Amazon Resource Name (ARN) that uniquely identifies the index.</p>
-</div></td></tr><tr class='stab '>
-                                  <td id='structfield.KeySchema'><code>KeySchema</code></td><td><div class='docblock'><p>The complete index key schema, which consists of one or more pairs of
-attribute names and key types (<code>HASH</code> or <code>RANGE</code>).</p>
-</div></td></tr><tr class='stab '>
-                                  <td id='structfield.ItemCount'><code>ItemCount</code></td><td><div class='docblock'><p>The number of items in the specified index. DynamoDB updates this value
-approximately every six hours. Recent changes might not be reflected in this
-value.</p>
-</div></td></tr></table><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><code>impl <a class='trait' href='https://serde-rs.github.io/serde/serde/serde/ser/trait.Serialize.html' title='serde::ser::Serialize'>Serialize</a> for <a class='struct' href='../../rusoto/dynamodb/struct.LocalSecondaryIndexDescription.html' title='rusoto::dynamodb::LocalSecondaryIndexDescription'>LocalSecondaryIndexDescription</a></code></h3><div class='impl-items'><h4 id='method.serialize' class='method'><code>fn <a href='https://serde-rs.github.io/serde/serde/serde/ser/trait.Serialize.html#method.serialize' class='fnname'>serialize</a>&lt;__S&gt;(&amp;self, serializer: &amp;mut __S) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>, __S::Error&gt; <span class='where'>where __S: <a class='trait' href='https://serde-rs.github.io/serde/serde/serde/ser/trait.Serializer.html' title='serde::ser::Serializer'>Serializer</a></span></code></h4>
-</div><h3 class='impl'><code>impl <a class='trait' href='https://serde-rs.github.io/serde/serde/serde/de/trait.Deserialize.html' title='serde::de::Deserialize'>Deserialize</a> for <a class='struct' href='../../rusoto/dynamodb/struct.LocalSecondaryIndexDescription.html' title='rusoto::dynamodb::LocalSecondaryIndexDescription'>LocalSecondaryIndexDescription</a></code></h3><div class='impl-items'><h4 id='method.deserialize' class='method'><code>fn <a href='https://serde-rs.github.io/serde/serde/serde/de/trait.Deserialize.html#method.deserialize' class='fnname'>deserialize</a>&lt;__D&gt;(deserializer: &amp;mut __D) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a class='struct' href='../../rusoto/dynamodb/struct.LocalSecondaryIndexDescription.html' title='rusoto::dynamodb::LocalSecondaryIndexDescription'>LocalSecondaryIndexDescription</a>, __D::Error&gt; <span class='where'>where __D: <a class='trait' href='https://serde-rs.github.io/serde/serde/serde/de/trait.Deserializer.html' title='serde::de::Deserializer'>Deserializer</a></span></code></h4>
-</div><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html' title='core::default::Default'>Default</a> for <a class='struct' href='../../rusoto/dynamodb/struct.LocalSecondaryIndexDescription.html' title='rusoto::dynamodb::LocalSecondaryIndexDescription'>LocalSecondaryIndexDescription</a></code></h3><div class='impl-items'><h4 id='method.default' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html#method.default' class='fnname'>default</a>() -&gt; <a class='struct' href='../../rusoto/dynamodb/struct.LocalSecondaryIndexDescription.html' title='rusoto::dynamodb::LocalSecondaryIndexDescription'>LocalSecondaryIndexDescription</a></code></h4>
-</div><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='struct' href='../../rusoto/dynamodb/struct.LocalSecondaryIndexDescription.html' title='rusoto::dynamodb::LocalSecondaryIndexDescription'>LocalSecondaryIndexDescription</a></code></h3><div class='impl-items'><h4 id='method.fmt' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#method.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
-</div></section>
+</div><h2 class='fields'>Fields</h2><span id='structfield.index_arn'><code>index_arn: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;</code></span>
+                           <span class='stab '></span><div class='docblock'><p>The Amazon Resource Name (ARN) that uniquely identifies the index.</p>
+</div><span id='structfield.index_name'><code>index_name: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/dynamodb/type.IndexName.html' title='rusoto::dynamodb::IndexName'>IndexName</a>&gt;</code></span>
+                           <span class='stab '></span><div class='docblock'><p>Represents the name of the local secondary index.</p>
+</div><span id='structfield.index_size_bytes'><code>index_size_bytes: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/dynamodb/type.Long.html' title='rusoto::dynamodb::Long'>Long</a>&gt;</code></span>
+                           <span class='stab '></span><div class='docblock'><p>The total size of the specified index, in bytes. DynamoDB updates this value approximately every six hours. Recent changes might not be reflected in this value. </p>
+</div><span id='structfield.item_count'><code>item_count: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/dynamodb/type.Long.html' title='rusoto::dynamodb::Long'>Long</a>&gt;</code></span>
+                           <span class='stab '></span><div class='docblock'><p>The number of items in the specified index. DynamoDB updates this value approximately every six hours. Recent changes might not be reflected in this value. </p>
+</div><span id='structfield.key_schema'><code>key_schema: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/dynamodb/type.KeySchema.html' title='rusoto::dynamodb::KeySchema'>KeySchema</a>&gt;</code></span>
+                           <span class='stab '></span><div class='docblock'><p><p>The complete key schema for the local secondary index, consisting of one or more pairs of attribute names and key types:</p> <ul> <li><p><code>HASH</code> - partition key</p> </li> <li><p><code>RANGE</code> - sort key</p></li> </ul> <note> <p>The partition key of an item is also known as its <i>hash attribute</i>. The term &quot;hash attribute&quot; derives from DynamoDB&#39; usage of an internal hash function to evenly distribute data items across partitions, based on their partition key values.</p> <p>The sort key of an item is also known as its <i>range attribute</i>. The term &quot;range attribute&quot; derives from the way DynamoDB stores items with the same partition key physically close together, in sorted order by the sort key value.</p></note></p>
+</div><span id='structfield.projection'><code>projection: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../rusoto/dynamodb/struct.Projection.html' title='rusoto::dynamodb::Projection'>Projection</a>&gt;</code></span>
+                           <span class='stab '></span><h2 id='implementations'>Trait Implementations</h2><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='struct' href='../../rusoto/dynamodb/struct.LocalSecondaryIndexDescription.html' title='rusoto::dynamodb::LocalSecondaryIndexDescription'>LocalSecondaryIndexDescription</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-6248' class='srclink' href='../../src/rusoto/home/adimarco/code/rusoto/target/debug/build/rusoto-9b092785f15fdaf7/out/dynamodb.rs.html#11134' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
+<div class='docblock'><p>Formats the value using the given formatter.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html' title='core::default::Default'>Default</a> for <a class='struct' href='../../rusoto/dynamodb/struct.LocalSecondaryIndexDescription.html' title='rusoto::dynamodb::LocalSecondaryIndexDescription'>LocalSecondaryIndexDescription</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-6259' class='srclink' href='../../src/rusoto/home/adimarco/code/rusoto/target/debug/build/rusoto-9b092785f15fdaf7/out/dynamodb.rs.html#11134' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.default' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html#tymethod.default' class='fnname'>default</a>() -&gt; <a class='struct' href='../../rusoto/dynamodb/struct.LocalSecondaryIndexDescription.html' title='rusoto::dynamodb::LocalSecondaryIndexDescription'>LocalSecondaryIndexDescription</a></code></h4>
+<div class='docblock'><p>Returns the &quot;default value&quot; for a type. <a href="https://doc.rust-lang.org/nightly/core/default/trait.Default.html#tymethod.default">Read more</a></p>
+</div></div></section>
     <section id='search' class="content hidden"></section>
 
     <section class="footer"></section>
@@ -99,6 +96,8 @@ value.</p>
                     <dd>Move down in search results</dd>
                     <dt>&#9166;</dt>
                     <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
                 </dl>
             </div>
 

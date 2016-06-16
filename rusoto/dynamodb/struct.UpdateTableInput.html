@@ -11,6 +11,7 @@
 
     <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
     <link rel="stylesheet" type="text/css" href="../../main.css">
+    
 
     
     
@@ -43,43 +44,33 @@
 
     <section id='main' class="content struct">
 <h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>rusoto</a>::<wbr><a href='index.html'>dynamodb</a>::<wbr><a class='struct' href=''>UpdateTableInput</a></span><span class='out-of-band'><span id='render-detail'>
-            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
-                [<span class='inner'>&#x2212;</span>]
-            </a>
-        </span><a id='src-3886' class='srclink' href='../../src/rusoto///Users/jimmy/Code/rusoto/target/debug/build/rusoto-27b53b229e74877b/out/dynamodb.rs.html#6957-6979' title='goto source code'>[src]</a></span></h1>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-9793' class='srclink' href='../../src/rusoto/home/adimarco/code/rusoto/target/debug/build/rusoto-9b092785f15fdaf7/out/dynamodb.rs.html#19068-19086' title='goto source code'>[src]</a></span></h1>
 <pre class='rust struct'>pub struct UpdateTableInput {
-    pub GlobalSecondaryIndexUpdates: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/dynamodb/type.GlobalSecondaryIndexUpdateList.html' title='rusoto::dynamodb::GlobalSecondaryIndexUpdateList'>GlobalSecondaryIndexUpdateList</a>&gt;,
-    pub ProvisionedThroughput: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../rusoto/dynamodb/struct.ProvisionedThroughput.html' title='rusoto::dynamodb::ProvisionedThroughput'>ProvisionedThroughput</a>&gt;,
-    pub StreamSpecification: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../rusoto/dynamodb/struct.StreamSpecification.html' title='rusoto::dynamodb::StreamSpecification'>StreamSpecification</a>&gt;,
-    pub TableName: <a class='type' href='../../rusoto/dynamodb/type.TableName.html' title='rusoto::dynamodb::TableName'>TableName</a>,
-    pub AttributeDefinitions: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/dynamodb/type.AttributeDefinitions.html' title='rusoto::dynamodb::AttributeDefinitions'>AttributeDefinitions</a>&gt;,
-}</pre><div class='docblock'><p>Represents the input of an <em>UpdateTable</em> operation.</p>
-</div><h2 class='fields'>Fields</h2>
-<table><tr class='stab '>
-                                  <td id='structfield.GlobalSecondaryIndexUpdates'><code>GlobalSecondaryIndexUpdates</code></td><td><div class='docblock'><p>An array of one or more global secondary indexes for the table. For each index
-in the array, you can request one action:
-  * <em>Create</em> - add a new global secondary index to the table.
-  * <em>Update</em> - modify the provisioned throughput settings of an existing global secondary index.
-  * <em>Delete</em> - remove a global secondary index from the table.
-For more information, see <a href="http://docs.aws.%0Aamazon.com/amazondynamodb/latest/developerguide/GSI.OnlineOps.html">Managing Global Secondary Indexes</a> in the
-<em>Amazon DynamoDB Developer Guide</em>.</p>
-</div></td></tr><tr class='stab '>
-                                  <td id='structfield.ProvisionedThroughput'><code>ProvisionedThroughput</code></td><td></td></tr><tr class='stab '>
-                                  <td id='structfield.StreamSpecification'><code>StreamSpecification</code></td><td><div class='docblock'><p>Represents the DynamoDB Streams configuration for the table.
-You will receive a <em>ResourceInUseException</em> if you attempt to enable a stream
-on a table that already has a stream, or if you attempt to disable a stream on
-a table which does not have a stream.</p>
-</div></td></tr><tr class='stab '>
-                                  <td id='structfield.TableName'><code>TableName</code></td><td><div class='docblock'><p>The name of the table to be updated.</p>
-</div></td></tr><tr class='stab '>
-                                  <td id='structfield.AttributeDefinitions'><code>AttributeDefinitions</code></td><td><div class='docblock'><p>An array of attributes that describe the key schema for the table and indexes.
-If you are adding a new global secondary index to the table,
-<em>AttributeDefinitions</em> must include the key element(s) of the new index.</p>
-</div></td></tr></table><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><code>impl <a class='trait' href='https://serde-rs.github.io/serde/serde/serde/ser/trait.Serialize.html' title='serde::ser::Serialize'>Serialize</a> for <a class='struct' href='../../rusoto/dynamodb/struct.UpdateTableInput.html' title='rusoto::dynamodb::UpdateTableInput'>UpdateTableInput</a></code></h3><div class='impl-items'><h4 id='method.serialize' class='method'><code>fn <a href='https://serde-rs.github.io/serde/serde/serde/ser/trait.Serialize.html#method.serialize' class='fnname'>serialize</a>&lt;__S&gt;(&amp;self, serializer: &amp;mut __S) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>, __S::Error&gt; <span class='where'>where __S: <a class='trait' href='https://serde-rs.github.io/serde/serde/serde/ser/trait.Serializer.html' title='serde::ser::Serializer'>Serializer</a></span></code></h4>
-</div><h3 class='impl'><code>impl <a class='trait' href='https://serde-rs.github.io/serde/serde/serde/de/trait.Deserialize.html' title='serde::de::Deserialize'>Deserialize</a> for <a class='struct' href='../../rusoto/dynamodb/struct.UpdateTableInput.html' title='rusoto::dynamodb::UpdateTableInput'>UpdateTableInput</a></code></h3><div class='impl-items'><h4 id='method.deserialize' class='method'><code>fn <a href='https://serde-rs.github.io/serde/serde/serde/de/trait.Deserialize.html#method.deserialize' class='fnname'>deserialize</a>&lt;__D&gt;(deserializer: &amp;mut __D) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a class='struct' href='../../rusoto/dynamodb/struct.UpdateTableInput.html' title='rusoto::dynamodb::UpdateTableInput'>UpdateTableInput</a>, __D::Error&gt; <span class='where'>where __D: <a class='trait' href='https://serde-rs.github.io/serde/serde/serde/de/trait.Deserializer.html' title='serde::de::Deserializer'>Deserializer</a></span></code></h4>
-</div><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html' title='core::default::Default'>Default</a> for <a class='struct' href='../../rusoto/dynamodb/struct.UpdateTableInput.html' title='rusoto::dynamodb::UpdateTableInput'>UpdateTableInput</a></code></h3><div class='impl-items'><h4 id='method.default' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html#method.default' class='fnname'>default</a>() -&gt; <a class='struct' href='../../rusoto/dynamodb/struct.UpdateTableInput.html' title='rusoto::dynamodb::UpdateTableInput'>UpdateTableInput</a></code></h4>
-</div><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='struct' href='../../rusoto/dynamodb/struct.UpdateTableInput.html' title='rusoto::dynamodb::UpdateTableInput'>UpdateTableInput</a></code></h3><div class='impl-items'><h4 id='method.fmt' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#method.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
-</div></section>
+    pub attribute_definitions: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/dynamodb/type.AttributeDefinitions.html' title='rusoto::dynamodb::AttributeDefinitions'>AttributeDefinitions</a>&gt;,
+    pub global_secondary_index_updates: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/dynamodb/type.GlobalSecondaryIndexUpdateList.html' title='rusoto::dynamodb::GlobalSecondaryIndexUpdateList'>GlobalSecondaryIndexUpdateList</a>&gt;,
+    pub provisioned_throughput: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../rusoto/dynamodb/struct.ProvisionedThroughput.html' title='rusoto::dynamodb::ProvisionedThroughput'>ProvisionedThroughput</a>&gt;,
+    pub stream_specification: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../rusoto/dynamodb/struct.StreamSpecification.html' title='rusoto::dynamodb::StreamSpecification'>StreamSpecification</a>&gt;,
+    pub table_name: <a class='type' href='../../rusoto/dynamodb/type.TableName.html' title='rusoto::dynamodb::TableName'>TableName</a>,
+}</pre><div class='docblock'><p>Represents the input of an <i>UpdateTable</i> operation.</p>
+</div><h2 class='fields'>Fields</h2><span id='structfield.attribute_definitions'><code>attribute_definitions: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/dynamodb/type.AttributeDefinitions.html' title='rusoto::dynamodb::AttributeDefinitions'>AttributeDefinitions</a>&gt;</code></span>
+                           <span class='stab '></span><div class='docblock'><p>An array of attributes that describe the key schema for the table and indexes. If you are adding a new global secondary index to the table, <i>AttributeDefinitions</i> must include the key element(s) of the new index.</p>
+</div><span id='structfield.global_secondary_index_updates'><code>global_secondary_index_updates: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/dynamodb/type.GlobalSecondaryIndexUpdateList.html' title='rusoto::dynamodb::GlobalSecondaryIndexUpdateList'>GlobalSecondaryIndexUpdateList</a>&gt;</code></span>
+                           <span class='stab '></span><div class='docblock'><p>An array of one or more global secondary indexes for the table. For each index in the array, you can request one action:</p> <ul> <li><p><i>Create</i> - add a new global secondary index to the table.</p></li> <li><p><i>Update</i> - modify the provisioned throughput settings of an existing global secondary index.</p></li> <li><p><i>Delete</i> - remove a global secondary index from the table.</p></li> </ul> <p>For more information, see <a href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GSI.OnlineOps.html">Managing Global Secondary Indexes</a> in the <i>Amazon DynamoDB Developer Guide</i>. </p>
+</div><span id='structfield.provisioned_throughput'><code>provisioned_throughput: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../rusoto/dynamodb/struct.ProvisionedThroughput.html' title='rusoto::dynamodb::ProvisionedThroughput'>ProvisionedThroughput</a>&gt;</code></span>
+                           <span class='stab '></span><span id='structfield.stream_specification'><code>stream_specification: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../rusoto/dynamodb/struct.StreamSpecification.html' title='rusoto::dynamodb::StreamSpecification'>StreamSpecification</a>&gt;</code></span>
+                           <span class='stab '></span><div class='docblock'><p><p>Represents the DynamoDB Streams configuration for the table.</p> <note> <p>You will receive a <i>ResourceInUseException</i> if you attempt to enable a stream on a table that already has a stream, or if you attempt to disable a stream on a table which does not have a stream.</p> </note></p>
+</div><span id='structfield.table_name'><code>table_name: <a class='type' href='../../rusoto/dynamodb/type.TableName.html' title='rusoto::dynamodb::TableName'>TableName</a></code></span>
+                           <span class='stab '></span><div class='docblock'><p>The name of the table to be updated.</p>
+</div><h2 id='implementations'>Trait Implementations</h2><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='struct' href='../../rusoto/dynamodb/struct.UpdateTableInput.html' title='rusoto::dynamodb::UpdateTableInput'>UpdateTableInput</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-9799' class='srclink' href='../../src/rusoto/home/adimarco/code/rusoto/target/debug/build/rusoto-9b092785f15fdaf7/out/dynamodb.rs.html#19067' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
+<div class='docblock'><p>Formats the value using the given formatter.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html' title='core::default::Default'>Default</a> for <a class='struct' href='../../rusoto/dynamodb/struct.UpdateTableInput.html' title='rusoto::dynamodb::UpdateTableInput'>UpdateTableInput</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-9809' class='srclink' href='../../src/rusoto/home/adimarco/code/rusoto/target/debug/build/rusoto-9b092785f15fdaf7/out/dynamodb.rs.html#19067' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.default' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html#tymethod.default' class='fnname'>default</a>() -&gt; <a class='struct' href='../../rusoto/dynamodb/struct.UpdateTableInput.html' title='rusoto::dynamodb::UpdateTableInput'>UpdateTableInput</a></code></h4>
+<div class='docblock'><p>Returns the &quot;default value&quot; for a type. <a href="https://doc.rust-lang.org/nightly/core/default/trait.Default.html#tymethod.default">Read more</a></p>
+</div></div></section>
     <section id='search' class="content hidden"></section>
 
     <section class="footer"></section>
@@ -102,6 +93,8 @@ If you are adding a new global secondary index to the table,
                     <dd>Move down in search results</dd>
                     <dt>&#9166;</dt>
                     <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
                 </dl>
             </div>
 

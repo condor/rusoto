@@ -11,6 +11,7 @@
 
     <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
     <link rel="stylesheet" type="text/css" href="../../main.css">
+    
 
     
     
@@ -43,36 +44,27 @@
 
     <section id='main' class="content struct">
 <h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>rusoto</a>::<wbr><a href='index.html'>dynamodb</a>::<wbr><a class='struct' href=''>PutItemOutput</a></span><span class='out-of-band'><span id='render-detail'>
-            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
-                [<span class='inner'>&#x2212;</span>]
-            </a>
-        </span><a id='src-518' class='srclink' href='../../src/rusoto///Users/jimmy/Code/rusoto/target/debug/build/rusoto-27b53b229e74877b/out/dynamodb.rs.html#8-24' title='goto source code'>[src]</a></span></h1>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-7221' class='srclink' href='../../src/rusoto/home/adimarco/code/rusoto/target/debug/build/rusoto-9b092785f15fdaf7/out/dynamodb.rs.html#13286-13297' title='goto source code'>[src]</a></span></h1>
 <pre class='rust struct'>pub struct PutItemOutput {
-    pub Attributes: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/dynamodb/type.AttributeMap.html' title='rusoto::dynamodb::AttributeMap'>AttributeMap</a>&gt;,
-    pub ItemCollectionMetrics: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../rusoto/dynamodb/struct.ItemCollectionMetrics.html' title='rusoto::dynamodb::ItemCollectionMetrics'>ItemCollectionMetrics</a>&gt;,
-    pub ConsumedCapacity: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../rusoto/dynamodb/struct.ConsumedCapacity.html' title='rusoto::dynamodb::ConsumedCapacity'>ConsumedCapacity</a>&gt;,
-}</pre><div class='docblock'><p>Represents the output of a <em>PutItem</em> operation.</p>
-</div><h2 class='fields'>Fields</h2>
-<table><tr class='stab '>
-                                  <td id='structfield.Attributes'><code>Attributes</code></td><td><div class='docblock'><p>The attribute values as they appeared before the <em>PutItem</em> operation, but only
-if <em>ReturnValues</em> is specified as <code>ALL_OLD</code> in the request. Each element
-consists of an attribute name and an attribute value.</p>
-</div></td></tr><tr class='stab '>
-                                  <td id='structfield.ItemCollectionMetrics'><code>ItemCollectionMetrics</code></td><td><div class='docblock'><p>Information about item collections, if any, that were affected by the
-operation. <em>ItemCollectionMetrics</em> is only returned if the request asked for
-it. If the table does not have any local secondary indexes, this information
-is not returned in the response.
-Each <em>ItemCollectionMetrics</em> element consists of:
-  * <em>ItemCollectionKey</em> - The hash key value of the item collection. This is the same as the hash key of the item.
-  * <em>SizeEstimateRange</em> - An estimate of item collection size, in gigabytes. This value is a two-element array containing a lower bound and an upper bound for the estimate. The estimate includes the size of all the items in the table, plus the size of all attributes projected into all of the local secondary indexes on that table. Use this estimate to measure whether a local secondary index is approaching its size limit.
-The estimate is subject to change over time; therefore, do not rely on the
-precision or accuracy of the estimate.</p>
-</div></td></tr><tr class='stab '>
-                                  <td id='structfield.ConsumedCapacity'><code>ConsumedCapacity</code></td><td></td></tr></table><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><code>impl <a class='trait' href='https://serde-rs.github.io/serde/serde/serde/ser/trait.Serialize.html' title='serde::ser::Serialize'>Serialize</a> for <a class='struct' href='../../rusoto/dynamodb/struct.PutItemOutput.html' title='rusoto::dynamodb::PutItemOutput'>PutItemOutput</a></code></h3><div class='impl-items'><h4 id='method.serialize' class='method'><code>fn <a href='https://serde-rs.github.io/serde/serde/serde/ser/trait.Serialize.html#method.serialize' class='fnname'>serialize</a>&lt;__S&gt;(&amp;self, serializer: &amp;mut __S) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>, __S::Error&gt; <span class='where'>where __S: <a class='trait' href='https://serde-rs.github.io/serde/serde/serde/ser/trait.Serializer.html' title='serde::ser::Serializer'>Serializer</a></span></code></h4>
-</div><h3 class='impl'><code>impl <a class='trait' href='https://serde-rs.github.io/serde/serde/serde/de/trait.Deserialize.html' title='serde::de::Deserialize'>Deserialize</a> for <a class='struct' href='../../rusoto/dynamodb/struct.PutItemOutput.html' title='rusoto::dynamodb::PutItemOutput'>PutItemOutput</a></code></h3><div class='impl-items'><h4 id='method.deserialize' class='method'><code>fn <a href='https://serde-rs.github.io/serde/serde/serde/de/trait.Deserialize.html#method.deserialize' class='fnname'>deserialize</a>&lt;__D&gt;(deserializer: &amp;mut __D) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a class='struct' href='../../rusoto/dynamodb/struct.PutItemOutput.html' title='rusoto::dynamodb::PutItemOutput'>PutItemOutput</a>, __D::Error&gt; <span class='where'>where __D: <a class='trait' href='https://serde-rs.github.io/serde/serde/serde/de/trait.Deserializer.html' title='serde::de::Deserializer'>Deserializer</a></span></code></h4>
-</div><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html' title='core::default::Default'>Default</a> for <a class='struct' href='../../rusoto/dynamodb/struct.PutItemOutput.html' title='rusoto::dynamodb::PutItemOutput'>PutItemOutput</a></code></h3><div class='impl-items'><h4 id='method.default' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html#method.default' class='fnname'>default</a>() -&gt; <a class='struct' href='../../rusoto/dynamodb/struct.PutItemOutput.html' title='rusoto::dynamodb::PutItemOutput'>PutItemOutput</a></code></h4>
-</div><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='struct' href='../../rusoto/dynamodb/struct.PutItemOutput.html' title='rusoto::dynamodb::PutItemOutput'>PutItemOutput</a></code></h3><div class='impl-items'><h4 id='method.fmt' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#method.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
-</div></section>
+    pub attributes: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/dynamodb/type.AttributeMap.html' title='rusoto::dynamodb::AttributeMap'>AttributeMap</a>&gt;,
+    pub consumed_capacity: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../rusoto/dynamodb/struct.ConsumedCapacity.html' title='rusoto::dynamodb::ConsumedCapacity'>ConsumedCapacity</a>&gt;,
+    pub item_collection_metrics: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../rusoto/dynamodb/struct.ItemCollectionMetrics.html' title='rusoto::dynamodb::ItemCollectionMetrics'>ItemCollectionMetrics</a>&gt;,
+}</pre><div class='docblock'><p>Represents the output of a <i>PutItem</i> operation.</p>
+</div><h2 class='fields'>Fields</h2><span id='structfield.attributes'><code>attributes: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/dynamodb/type.AttributeMap.html' title='rusoto::dynamodb::AttributeMap'>AttributeMap</a>&gt;</code></span>
+                           <span class='stab '></span><div class='docblock'><p>The attribute values as they appeared before the <i>PutItem</i> operation, but only if <i>ReturnValues</i> is specified as <code>ALL_OLD</code> in the request. Each element consists of an attribute name and an attribute value.</p>
+</div><span id='structfield.consumed_capacity'><code>consumed_capacity: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../rusoto/dynamodb/struct.ConsumedCapacity.html' title='rusoto::dynamodb::ConsumedCapacity'>ConsumedCapacity</a>&gt;</code></span>
+                           <span class='stab '></span><span id='structfield.item_collection_metrics'><code>item_collection_metrics: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../rusoto/dynamodb/struct.ItemCollectionMetrics.html' title='rusoto::dynamodb::ItemCollectionMetrics'>ItemCollectionMetrics</a>&gt;</code></span>
+                           <span class='stab '></span><div class='docblock'><p><p>Information about item collections, if any, that were affected by the operation. <i>ItemCollectionMetrics</i> is only returned if the request asked for it. If the table does not have any local secondary indexes, this information is not returned in the response.</p> <p>Each <i>ItemCollectionMetrics</i> element consists of:</p> <ul> <li><p><i>ItemCollectionKey</i> - The partition key value of the item collection. This is the same as the partition key value of the item itself.</p></li> <li><p><i>SizeEstimateRange</i> - An estimate of item collection size, in gigabytes. This value is a two-element array containing a lower bound and an upper bound for the estimate. The estimate includes the size of all the items in the table, plus the size of all attributes projected into all of the local secondary indexes on that table. Use this estimate to measure whether a local secondary index is approaching its size limit.</p> <p>The estimate is subject to change over time; therefore, do not rely on the precision or accuracy of the estimate.</p> </li> </ul></p>
+</div><h2 id='implementations'>Trait Implementations</h2><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='struct' href='../../rusoto/dynamodb/struct.PutItemOutput.html' title='rusoto::dynamodb::PutItemOutput'>PutItemOutput</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-7225' class='srclink' href='../../src/rusoto/home/adimarco/code/rusoto/target/debug/build/rusoto-9b092785f15fdaf7/out/dynamodb.rs.html#13285' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
+<div class='docblock'><p>Formats the value using the given formatter.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html' title='core::default::Default'>Default</a> for <a class='struct' href='../../rusoto/dynamodb/struct.PutItemOutput.html' title='rusoto::dynamodb::PutItemOutput'>PutItemOutput</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-7233' class='srclink' href='../../src/rusoto/home/adimarco/code/rusoto/target/debug/build/rusoto-9b092785f15fdaf7/out/dynamodb.rs.html#13285' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.default' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html#tymethod.default' class='fnname'>default</a>() -&gt; <a class='struct' href='../../rusoto/dynamodb/struct.PutItemOutput.html' title='rusoto::dynamodb::PutItemOutput'>PutItemOutput</a></code></h4>
+<div class='docblock'><p>Returns the &quot;default value&quot; for a type. <a href="https://doc.rust-lang.org/nightly/core/default/trait.Default.html#tymethod.default">Read more</a></p>
+</div></div></section>
     <section id='search' class="content hidden"></section>
 
     <section class="footer"></section>
@@ -95,6 +87,8 @@ precision or accuracy of the estimate.</p>
                     <dd>Move down in search results</dd>
                     <dt>&#9166;</dt>
                     <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
                 </dl>
             </div>
 

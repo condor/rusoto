@@ -1,1 +1,1 @@
-initSidebarItems({"struct":[["AWSError","Simple wrapper around a String to store the error"]],"type":[["AWSResult",""]]});
+initSidebarItems({"struct":[["AwsError","An error produced when AWS API calls are unsuccessful."]],"type":[["AwsResult","The result type produced by AWS API calls."]]});

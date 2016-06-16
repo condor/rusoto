@@ -11,6 +11,7 @@
 
     <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
     <link rel="stylesheet" type="text/css" href="../../main.css">
+    
 
     
     
@@ -43,49 +44,33 @@
 
     <section id='main' class="content struct">
 <h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>rusoto</a>::<wbr><a href='index.html'>dynamodb</a>::<wbr><a class='struct' href=''>ScanOutput</a></span><span class='out-of-band'><span id='render-detail'>
-            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
-                [<span class='inner'>&#x2212;</span>]
-            </a>
-        </span><a id='src-7730' class='srclink' href='../../src/rusoto///Users/jimmy/Code/rusoto/target/debug/build/rusoto-27b53b229e74877b/out/dynamodb.rs.html#14968-14997' title='goto source code'>[src]</a></span></h1>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-8598' class='srclink' href='../../src/rusoto/home/adimarco/code/rusoto/target/debug/build/rusoto-9b092785f15fdaf7/out/dynamodb.rs.html#16363-16382' title='goto source code'>[src]</a></span></h1>
 <pre class='rust struct'>pub struct ScanOutput {
-    pub Count: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/dynamodb/type.Integer.html' title='rusoto::dynamodb::Integer'>Integer</a>&gt;,
-    pub Items: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/dynamodb/type.ItemList.html' title='rusoto::dynamodb::ItemList'>ItemList</a>&gt;,
-    pub LastEvaluatedKey: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/dynamodb/type.Key.html' title='rusoto::dynamodb::Key'>Key</a>&gt;,
-    pub ScannedCount: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/dynamodb/type.Integer.html' title='rusoto::dynamodb::Integer'>Integer</a>&gt;,
-    pub ConsumedCapacity: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../rusoto/dynamodb/struct.ConsumedCapacity.html' title='rusoto::dynamodb::ConsumedCapacity'>ConsumedCapacity</a>&gt;,
-}</pre><div class='docblock'><p>Represents the output of a <em>Scan</em> operation.</p>
-</div><h2 class='fields'>Fields</h2>
-<table><tr class='stab '>
-                                  <td id='structfield.Count'><code>Count</code></td><td><div class='docblock'><p>The number of items in the response.
-If you set <em>ScanFilter</em> in the request, then <em>Count</em> is the number of items
-returned after the filter was applied, and <em>ScannedCount</em> is the number of
-matching items before the filter was applied.
-If you did not use a filter in the request, then <em>Count</em> is the same as
-<em>ScannedCount</em>.</p>
-</div></td></tr><tr class='stab '>
-                                  <td id='structfield.Items'><code>Items</code></td><td><div class='docblock'><p>An array of item attributes that match the scan criteria. Each element in this
-array consists of an attribute name and the value for that attribute.</p>
-</div></td></tr><tr class='stab '>
-                                  <td id='structfield.LastEvaluatedKey'><code>LastEvaluatedKey</code></td><td><div class='docblock'><p>The primary key of the item where the operation stopped, inclusive of the
-previous result set. Use this value to start a new operation, excluding this
-value in the new request.
-If <em>LastEvaluatedKey</em> is empty, then the &quot;last page&quot; of results has been
-processed and there is no more data to be retrieved.
-If <em>LastEvaluatedKey</em> is not empty, it does not necessarily mean that there is
-more data in the result set. The only way to know when you have reached the
-end of the result set is when <em>LastEvaluatedKey</em> is empty.</p>
-</div></td></tr><tr class='stab '>
-                                  <td id='structfield.ScannedCount'><code>ScannedCount</code></td><td><div class='docblock'><p>The number of items evaluated, before any <em>ScanFilter</em> is applied. A high
-<em>ScannedCount</em> value with few, or no, <em>Count</em> results indicates an inefficient
-<em>Scan</em> operation. For more information, see <a href="http://do%0Acs.aws.amazon.com/amazondynamodb/latest/developerguide/QueryAndScan.html#Count">Count and ScannedCount</a> in the <em>Amazon DynamoDB Developer Guide</em>.
-If you did not use a filter in the request, then <em>ScannedCount</em> is the same as
-<em>Count</em>.</p>
-</div></td></tr><tr class='stab '>
-                                  <td id='structfield.ConsumedCapacity'><code>ConsumedCapacity</code></td><td></td></tr></table><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><code>impl <a class='trait' href='https://serde-rs.github.io/serde/serde/serde/ser/trait.Serialize.html' title='serde::ser::Serialize'>Serialize</a> for <a class='struct' href='../../rusoto/dynamodb/struct.ScanOutput.html' title='rusoto::dynamodb::ScanOutput'>ScanOutput</a></code></h3><div class='impl-items'><h4 id='method.serialize' class='method'><code>fn <a href='https://serde-rs.github.io/serde/serde/serde/ser/trait.Serialize.html#method.serialize' class='fnname'>serialize</a>&lt;__S&gt;(&amp;self, serializer: &amp;mut __S) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>, __S::Error&gt; <span class='where'>where __S: <a class='trait' href='https://serde-rs.github.io/serde/serde/serde/ser/trait.Serializer.html' title='serde::ser::Serializer'>Serializer</a></span></code></h4>
-</div><h3 class='impl'><code>impl <a class='trait' href='https://serde-rs.github.io/serde/serde/serde/de/trait.Deserialize.html' title='serde::de::Deserialize'>Deserialize</a> for <a class='struct' href='../../rusoto/dynamodb/struct.ScanOutput.html' title='rusoto::dynamodb::ScanOutput'>ScanOutput</a></code></h3><div class='impl-items'><h4 id='method.deserialize' class='method'><code>fn <a href='https://serde-rs.github.io/serde/serde/serde/de/trait.Deserialize.html#method.deserialize' class='fnname'>deserialize</a>&lt;__D&gt;(deserializer: &amp;mut __D) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a class='struct' href='../../rusoto/dynamodb/struct.ScanOutput.html' title='rusoto::dynamodb::ScanOutput'>ScanOutput</a>, __D::Error&gt; <span class='where'>where __D: <a class='trait' href='https://serde-rs.github.io/serde/serde/serde/de/trait.Deserializer.html' title='serde::de::Deserializer'>Deserializer</a></span></code></h4>
-</div><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html' title='core::default::Default'>Default</a> for <a class='struct' href='../../rusoto/dynamodb/struct.ScanOutput.html' title='rusoto::dynamodb::ScanOutput'>ScanOutput</a></code></h3><div class='impl-items'><h4 id='method.default' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html#method.default' class='fnname'>default</a>() -&gt; <a class='struct' href='../../rusoto/dynamodb/struct.ScanOutput.html' title='rusoto::dynamodb::ScanOutput'>ScanOutput</a></code></h4>
-</div><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='struct' href='../../rusoto/dynamodb/struct.ScanOutput.html' title='rusoto::dynamodb::ScanOutput'>ScanOutput</a></code></h3><div class='impl-items'><h4 id='method.fmt' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#method.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
-</div></section>
+    pub consumed_capacity: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../rusoto/dynamodb/struct.ConsumedCapacity.html' title='rusoto::dynamodb::ConsumedCapacity'>ConsumedCapacity</a>&gt;,
+    pub count: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/dynamodb/type.Integer.html' title='rusoto::dynamodb::Integer'>Integer</a>&gt;,
+    pub items: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/dynamodb/type.ItemList.html' title='rusoto::dynamodb::ItemList'>ItemList</a>&gt;,
+    pub last_evaluated_key: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/dynamodb/type.Key.html' title='rusoto::dynamodb::Key'>Key</a>&gt;,
+    pub scanned_count: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/dynamodb/type.Integer.html' title='rusoto::dynamodb::Integer'>Integer</a>&gt;,
+}</pre><div class='docblock'><p>Represents the output of a <i>Scan</i> operation.</p>
+</div><h2 class='fields'>Fields</h2><span id='structfield.consumed_capacity'><code>consumed_capacity: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../rusoto/dynamodb/struct.ConsumedCapacity.html' title='rusoto::dynamodb::ConsumedCapacity'>ConsumedCapacity</a>&gt;</code></span>
+                           <span class='stab '></span><span id='structfield.count'><code>count: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/dynamodb/type.Integer.html' title='rusoto::dynamodb::Integer'>Integer</a>&gt;</code></span>
+                           <span class='stab '></span><div class='docblock'><p>The number of items in the response.</p> <p>If you set <i>ScanFilter</i> in the request, then <i>Count</i> is the number of items returned after the filter was applied, and <i>ScannedCount</i> is the number of matching items before the filter was applied.</p> <p>If you did not use a filter in the request, then <i>Count</i> is the same as <i>ScannedCount</i>.</p>
+</div><span id='structfield.items'><code>items: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/dynamodb/type.ItemList.html' title='rusoto::dynamodb::ItemList'>ItemList</a>&gt;</code></span>
+                           <span class='stab '></span><div class='docblock'><p>An array of item attributes that match the scan criteria. Each element in this array consists of an attribute name and the value for that attribute.</p>
+</div><span id='structfield.last_evaluated_key'><code>last_evaluated_key: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/dynamodb/type.Key.html' title='rusoto::dynamodb::Key'>Key</a>&gt;</code></span>
+                           <span class='stab '></span><div class='docblock'><p>The primary key of the item where the operation stopped, inclusive of the previous result set. Use this value to start a new operation, excluding this value in the new request.</p> <p>If <i>LastEvaluatedKey</i> is empty, then the "last page" of results has been processed and there is no more data to be retrieved.</p> <p>If <i>LastEvaluatedKey</i> is not empty, it does not necessarily mean that there is more data in the result set. The only way to know when you have reached the end of the result set is when <i>LastEvaluatedKey</i> is empty.</p>
+</div><span id='structfield.scanned_count'><code>scanned_count: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/dynamodb/type.Integer.html' title='rusoto::dynamodb::Integer'>Integer</a>&gt;</code></span>
+                           <span class='stab '></span><div class='docblock'><p>The number of items evaluated, before any <i>ScanFilter</i> is applied. A high <i>ScannedCount</i> value with few, or no, <i>Count</i> results indicates an inefficient <i>Scan</i> operation. For more information, see <a href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/QueryAndScan.html#Count">Count and ScannedCount</a> in the <i>Amazon DynamoDB Developer Guide</i>.</p> <p>If you did not use a filter in the request, then <i>ScannedCount</i> is the same as <i>Count</i>.</p>
+</div><h2 id='implementations'>Trait Implementations</h2><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='struct' href='../../rusoto/dynamodb/struct.ScanOutput.html' title='rusoto::dynamodb::ScanOutput'>ScanOutput</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-8604' class='srclink' href='../../src/rusoto/home/adimarco/code/rusoto/target/debug/build/rusoto-9b092785f15fdaf7/out/dynamodb.rs.html#16362' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
+<div class='docblock'><p>Formats the value using the given formatter.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html' title='core::default::Default'>Default</a> for <a class='struct' href='../../rusoto/dynamodb/struct.ScanOutput.html' title='rusoto::dynamodb::ScanOutput'>ScanOutput</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-8614' class='srclink' href='../../src/rusoto/home/adimarco/code/rusoto/target/debug/build/rusoto-9b092785f15fdaf7/out/dynamodb.rs.html#16362' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.default' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html#tymethod.default' class='fnname'>default</a>() -&gt; <a class='struct' href='../../rusoto/dynamodb/struct.ScanOutput.html' title='rusoto::dynamodb::ScanOutput'>ScanOutput</a></code></h4>
+<div class='docblock'><p>Returns the &quot;default value&quot; for a type. <a href="https://doc.rust-lang.org/nightly/core/default/trait.Default.html#tymethod.default">Read more</a></p>
+</div></div></section>
     <section id='search' class="content hidden"></section>
 
     <section class="footer"></section>
@@ -108,6 +93,8 @@ If you did not use a filter in the request, then <em>ScannedCount</em> is the sa
                     <dd>Move down in search results</dd>
                     <dt>&#9166;</dt>
                     <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
                 </dl>
             </div>
 

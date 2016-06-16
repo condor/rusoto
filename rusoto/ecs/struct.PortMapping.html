@@ -11,6 +11,7 @@
 
     <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
     <link rel="stylesheet" type="text/css" href="../../main.css">
+    
 
     
     
@@ -43,55 +44,28 @@
 
     <section id='main' class="content struct">
 <h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>rusoto</a>::<wbr><a href='index.html'>ecs</a>::<wbr><a class='struct' href=''>PortMapping</a></span><span class='out-of-band'><span id='render-detail'>
-            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
-                [<span class='inner'>&#x2212;</span>]
-            </a>
-        </span><a id='src-20362' class='srclink' href='../../src/rusoto///Users/jimmy/Code/rusoto/target/debug/build/rusoto-27b53b229e74877b/out/ecs.rs.html#19581-19612' title='goto source code'>[src]</a></span></h1>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-58546' class='srclink' href='../../src/rusoto/home/adimarco/code/rusoto/target/debug/build/rusoto-9b092785f15fdaf7/out/ecs.rs.html#15459-15472' title='goto source code'>[src]</a></span></h1>
 <pre class='rust struct'>pub struct PortMapping {
+    pub container_port: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/ecs/type.Integer.html' title='rusoto::ecs::Integer'>Integer</a>&gt;,
+    pub host_port: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/ecs/type.Integer.html' title='rusoto::ecs::Integer'>Integer</a>&gt;,
     pub protocol: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/ecs/type.TransportProtocol.html' title='rusoto::ecs::TransportProtocol'>TransportProtocol</a>&gt;,
-    pub containerPort: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/ecs/type.Integer.html' title='rusoto::ecs::Integer'>Integer</a>&gt;,
-    pub hostPort: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/ecs/type.Integer.html' title='rusoto::ecs::Integer'>Integer</a>&gt;,
-}</pre><div class='docblock'><p>Port mappings allow containers to access ports on the host container instance
-to send or receive traffic. Port mappings are specified as part of the
-container definition. After a task reaches the <code>RUNNING</code> status, manual and
-automatic host and container port assignments are visible in the
-<code>networkBindings</code> section of DescribeTasks API responses.</p>
-</div><h2 class='fields'>Fields</h2>
-<table><tr class='stab '>
-                                  <td id='structfield.protocol'><code>protocol</code></td><td><div class='docblock'><p>The protocol used for the port mapping. Valid values are <code>tcp</code> and <code>udp</code>. The
-default is <code>tcp</code>.</p>
-</div></td></tr><tr class='stab '>
-                                  <td id='structfield.containerPort'><code>containerPort</code></td><td><div class='docblock'><p>The port number on the container that is bound to the user-specified or
-automatically assigned host port. If you specify a container port and not a
-host port, your container automatically receives a host port in the ephemeral
-port range (for more information, see <code>hostPort</code>).</p>
-</div></td></tr><tr class='stab '>
-                                  <td id='structfield.hostPort'><code>hostPort</code></td><td><div class='docblock'><p>The port number on the container instance to reserve for your container. You
-can specify a non-reserved host port for your container port mapping, or you
-can omit the <code>hostPort</code> (or set it to <code>0</code>) while specifying a <code>containerPort</code>
-and your container automatically receives a port in the ephemeral port range
-for your container instance operating system and Docker version.
-The default ephemeral port range is 49153 to 65535, and this range is used for
-Docker versions prior to 1.6.0. For Docker version 1.6.0 and later, the Docker
-daemon tries to read the ephemeral port range from
-<code>/proc/sys/net/ipv4/ip_local_port_range</code>; if this kernel parameter is
-unavailable, the default ephemeral port range is used. You should not attempt
-to specify a host port in the ephemeral port range, because these are reserved
-for automatic assignment. In general, ports below 32768 are outside of the
-ephemeral port range.
-The default reserved ports are 22 for SSH, the Docker ports 2375 and 2376, and
-the Amazon ECS container agent port 51678. Any host port that was previously
-specified in a running task is also reserved while the task is running (after
-a task stops, the host port is released).The current reserved ports are
-displayed in the <code>remainingResources</code> of DescribeContainerInstances output,
-and a container instance may have up to 50 reserved ports at a time, including
-the default reserved ports (automatically assigned ports do not count toward
-this limit).</p>
-</div></td></tr></table><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><code>impl <a class='trait' href='https://serde-rs.github.io/serde/serde/serde/ser/trait.Serialize.html' title='serde::ser::Serialize'>Serialize</a> for <a class='struct' href='../../rusoto/ecs/struct.PortMapping.html' title='rusoto::ecs::PortMapping'>PortMapping</a></code></h3><div class='impl-items'><h4 id='method.serialize' class='method'><code>fn <a href='https://serde-rs.github.io/serde/serde/serde/ser/trait.Serialize.html#method.serialize' class='fnname'>serialize</a>&lt;__S&gt;(&amp;self, serializer: &amp;mut __S) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>, __S::Error&gt; <span class='where'>where __S: <a class='trait' href='https://serde-rs.github.io/serde/serde/serde/ser/trait.Serializer.html' title='serde::ser::Serializer'>Serializer</a></span></code></h4>
-</div><h3 class='impl'><code>impl <a class='trait' href='https://serde-rs.github.io/serde/serde/serde/de/trait.Deserialize.html' title='serde::de::Deserialize'>Deserialize</a> for <a class='struct' href='../../rusoto/ecs/struct.PortMapping.html' title='rusoto::ecs::PortMapping'>PortMapping</a></code></h3><div class='impl-items'><h4 id='method.deserialize' class='method'><code>fn <a href='https://serde-rs.github.io/serde/serde/serde/de/trait.Deserialize.html#method.deserialize' class='fnname'>deserialize</a>&lt;__D&gt;(deserializer: &amp;mut __D) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a class='struct' href='../../rusoto/ecs/struct.PortMapping.html' title='rusoto::ecs::PortMapping'>PortMapping</a>, __D::Error&gt; <span class='where'>where __D: <a class='trait' href='https://serde-rs.github.io/serde/serde/serde/de/trait.Deserializer.html' title='serde::de::Deserializer'>Deserializer</a></span></code></h4>
-</div><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html' title='core::default::Default'>Default</a> for <a class='struct' href='../../rusoto/ecs/struct.PortMapping.html' title='rusoto::ecs::PortMapping'>PortMapping</a></code></h3><div class='impl-items'><h4 id='method.default' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html#method.default' class='fnname'>default</a>() -&gt; <a class='struct' href='../../rusoto/ecs/struct.PortMapping.html' title='rusoto::ecs::PortMapping'>PortMapping</a></code></h4>
-</div><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='struct' href='../../rusoto/ecs/struct.PortMapping.html' title='rusoto::ecs::PortMapping'>PortMapping</a></code></h3><div class='impl-items'><h4 id='method.fmt' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#method.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
-</div></section>
+}</pre><div class='docblock'><p>Port mappings allow containers to access ports on the host container instance to send or receive traffic. Port mappings are specified as part of the container definition. After a task reaches the <code>RUNNING</code> status, manual and automatic host and container port assignments are visible in the <code>networkBindings</code> section of <a>DescribeTasks</a> API responses.</p>
+</div><h2 class='fields'>Fields</h2><span id='structfield.container_port'><code>container_port: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/ecs/type.Integer.html' title='rusoto::ecs::Integer'>Integer</a>&gt;</code></span>
+                           <span class='stab '></span><div class='docblock'><p>The port number on the container that is bound to the user-specified or automatically assigned host port. If you specify a container port and not a host port, your container automatically receives a host port in the ephemeral port range (for more information, see <code>hostPort</code>).</p>
+</div><span id='structfield.host_port'><code>host_port: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/ecs/type.Integer.html' title='rusoto::ecs::Integer'>Integer</a>&gt;</code></span>
+                           <span class='stab '></span><div class='docblock'><p>The port number on the container instance to reserve for your container. You can specify a non-reserved host port for your container port mapping, or you can omit the <code>hostPort</code> (or set it to <code>0</code>) while specifying a <code>containerPort</code> and your container automatically receives a port in the ephemeral port range for your container instance operating system and Docker version.</p> <p>The default ephemeral port range is 49153 to 65535, and this range is used for Docker versions prior to 1.6.0. For Docker version 1.6.0 and later, the Docker daemon tries to read the ephemeral port range from <code>/proc/sys/net/ipv4/ip_local_port_range</code>; if this kernel parameter is unavailable, the default ephemeral port range is used. You should not attempt to specify a host port in the ephemeral port range, because these are reserved for automatic assignment. In general, ports below 32768 are outside of the ephemeral port range.</p> <p>The default reserved ports are 22 for SSH, the Docker ports 2375 and 2376, and the Amazon ECS container agent port 51678. Any host port that was previously specified in a running task is also reserved while the task is running (after a task stops, the host port is released).The current reserved ports are displayed in the <code>remainingResources</code> of <a>DescribeContainerInstances</a> output, and a container instance may have up to 50 reserved ports at a time, including the default reserved ports (automatically assigned ports do not count toward this limit).</p>
+</div><span id='structfield.protocol'><code>protocol: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/ecs/type.TransportProtocol.html' title='rusoto::ecs::TransportProtocol'>TransportProtocol</a>&gt;</code></span>
+                           <span class='stab '></span><div class='docblock'><p>The protocol used for the port mapping. Valid values are <code>tcp</code> and <code>udp</code>. The default is <code>tcp</code>.</p>
+</div><h2 id='implementations'>Trait Implementations</h2><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='struct' href='../../rusoto/ecs/struct.PortMapping.html' title='rusoto::ecs::PortMapping'>PortMapping</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-58550' class='srclink' href='../../src/rusoto/home/adimarco/code/rusoto/target/debug/build/rusoto-9b092785f15fdaf7/out/ecs.rs.html#15458' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
+<div class='docblock'><p>Formats the value using the given formatter.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html' title='core::default::Default'>Default</a> for <a class='struct' href='../../rusoto/ecs/struct.PortMapping.html' title='rusoto::ecs::PortMapping'>PortMapping</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-58558' class='srclink' href='../../src/rusoto/home/adimarco/code/rusoto/target/debug/build/rusoto-9b092785f15fdaf7/out/ecs.rs.html#15458' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.default' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html#tymethod.default' class='fnname'>default</a>() -&gt; <a class='struct' href='../../rusoto/ecs/struct.PortMapping.html' title='rusoto::ecs::PortMapping'>PortMapping</a></code></h4>
+<div class='docblock'><p>Returns the &quot;default value&quot; for a type. <a href="https://doc.rust-lang.org/nightly/core/default/trait.Default.html#tymethod.default">Read more</a></p>
+</div></div></section>
     <section id='search' class="content hidden"></section>
 
     <section class="footer"></section>
@@ -114,6 +88,8 @@ this limit).</p>
                     <dd>Move down in search results</dd>
                     <dt>&#9166;</dt>
                     <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
                 </dl>
             </div>
 

@@ -1,1 +1,0 @@
-initSidebarItems({"trait":[["OptionalMap","Optional fields for SQS call"],["SQSParams","Key:value pair for an SQS parameter."]],"type":[["Params",""]]});

@@ -11,6 +11,7 @@
 
     <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
     <link rel="stylesheet" type="text/css" href="../../main.css">
+    
 
     
     
@@ -43,22 +44,25 @@
 
     <section id='main' class="content struct">
 <h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>rusoto</a>::<wbr><a href='index.html'>s3</a>::<wbr><a class='struct' href=''>IndexDocument</a></span><span class='out-of-band'><span id='render-detail'>
-            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
-                [<span class='inner'>&#x2212;</span>]
-            </a>
-        </span><a id='src-34422' class='srclink' href='../../src/rusoto///Users/jimmy/Code/rusoto/codegen/s3.rs.html#1397-1404' title='goto source code'>[src]</a></span></h1>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-94232' class='srclink' href='../../src/rusoto/src/s3.rs.html#1422-1429' title='goto source code'>[src]</a></span></h1>
 <pre class='rust struct'>pub struct IndexDocument {
     pub suffix: <a class='type' href='../../rusoto/s3/type.Suffix.html' title='rusoto::s3::Suffix'>Suffix</a>,
-}</pre><h2 class='fields'>Fields</h2>
-<table><tr class='stab '>
-                                  <td id='structfield.suffix'><code>suffix</code></td><td><div class='docblock'><p>A suffix that is appended to a request that is for a directory on the website
+}</pre><h2 class='fields'>Fields</h2><span id='structfield.suffix'><code>suffix: <a class='type' href='../../rusoto/s3/type.Suffix.html' title='rusoto::s3::Suffix'>Suffix</a></code></span>
+                           <span class='stab '></span><div class='docblock'><p>A suffix that is appended to a request that is for a directory on the website
 endpoint (e.g. if the suffix is index.html and you make a request to
 samplebucket/images/ the data that is returned will be for the object with the
 key name images/index.html) The suffix must not be empty and must not include
 a slash character.</p>
-</div></td></tr></table><h2 id='implementations'>Trait Implementations</h2><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html' title='core::default::Default'>Default</a> for <a class='struct' href='../../rusoto/s3/struct.IndexDocument.html' title='rusoto::s3::IndexDocument'>IndexDocument</a></code></h3><div class='impl-items'><h4 id='method.default' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html#method.default' class='fnname'>default</a>() -&gt; <a class='struct' href='../../rusoto/s3/struct.IndexDocument.html' title='rusoto::s3::IndexDocument'>IndexDocument</a></code></h4>
-</div><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='struct' href='../../rusoto/s3/struct.IndexDocument.html' title='rusoto::s3::IndexDocument'>IndexDocument</a></code></h3><div class='impl-items'><h4 id='method.fmt' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#method.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
-</div></section>
+</div><h2 id='implementations'>Trait Implementations</h2><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html' title='core::default::Default'>Default</a> for <a class='struct' href='../../rusoto/s3/struct.IndexDocument.html' title='rusoto::s3::IndexDocument'>IndexDocument</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-94234' class='srclink' href='../../src/rusoto/src/s3.rs.html#1421' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.default' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html#tymethod.default' class='fnname'>default</a>() -&gt; <a class='struct' href='../../rusoto/s3/struct.IndexDocument.html' title='rusoto::s3::IndexDocument'>IndexDocument</a></code></h4>
+<div class='docblock'><p>Returns the &quot;default value&quot; for a type. <a href="https://doc.rust-lang.org/nightly/core/default/trait.Default.html#tymethod.default">Read more</a></p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='struct' href='../../rusoto/s3/struct.IndexDocument.html' title='rusoto::s3::IndexDocument'>IndexDocument</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-94236' class='srclink' href='../../src/rusoto/src/s3.rs.html#1421' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
+<div class='docblock'><p>Formats the value using the given formatter.</p>
+</div></div></section>
     <section id='search' class="content hidden"></section>
 
     <section class="footer"></section>
@@ -81,6 +85,8 @@ a slash character.</p>
                     <dd>Move down in search results</dd>
                     <dt>&#9166;</dt>
                     <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
                 </dl>
             </div>
 

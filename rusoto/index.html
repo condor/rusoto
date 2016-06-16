@@ -11,6 +11,7 @@
 
     <link rel="stylesheet" type="text/css" href="../rustdoc.css">
     <link rel="stylesheet" type="text/css" href="../main.css">
+    
 
     
     
@@ -43,156 +44,152 @@
 
     <section id='main' class="content mod">
 <h1 class='fqn'><span class='in-band'>Crate <a class='mod' href=''>rusoto</a></span><span class='out-of-band'><span id='render-detail'>
-            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
-                [<span class='inner'>&#x2212;</span>]
-            </a>
-        </span><a id='src-0' class='srclink' href='../src/rusoto/lib.rs.html#1-56' title='goto source code'>[src]</a></span></h1>
-<div class='docblock'>
-<h1 id='rusoto' class='section-header'><a href='#rusoto'>Rusoto</a></h1>
-<p>Rusoto is a Rust SDK for <a href="http://aws.amazon.com/">Amazon Web Services</a>.  It follows best practices
-for <a href="https://blogs.aws.amazon.com/security/post/Tx3D6U6WSFGOK2H/A-New-and-Standardized-Way-to-Manage-Credentials-in-the-AWS-SDKs">AWS Credentials</a>.</p>
-
-<p>The library interacts with AWS in the same fashion as Python&#39;s <a href="https://github.com/boto/boto3">boto3</a> SDK.</p>
-
-<h2 id='credentials' class='section-header'><a href='#credentials'>Credentials</a></h2>
-<p>Credentials are sourced from environment variables, AWS credentials file and IAM instance profiles,
-in that order.  IAM instance profile credentials are refreshed automatically as needed.</p>
-
-<h2 id='supported-services' class='section-header'><a href='#supported-services'>Supported services</a></h2>
-<ul>
-<li>DynamoDB</li>
-<li><a href="https://aws.amazon.com/ecs/">ECS</a></li>
-<li>KMS</li>
-<li>S3</li>
-<li>SQS</li>
-</ul>
-
-<h2 id='requests-and-request-signing' class='section-header'><a href='#requests-and-request-signing'>Requests and request signing</a></h2>
-<p>Rusoto uses <a href="http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">AWS Signature 4</a>
-to sign requests.</p>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-0' class='srclink' href='../src/rusoto/src/lib.rs.html#1-62' title='goto source code'>[src]</a></span></h1>
+<div class='docblock'><p>Rusoto is an <a href="https://aws.amazon.com/">AWS</a> SDK for Rust.
+A high level overview is available in <code>README.md</code> at <a href="https://github.com/rusoto/rusoto">https://github.com/rusoto/rusoto</a>.</p>
 </div><h2 id='modules' class='section-header'><a href="#modules">Modules</a></h2>
 <table>
-                    <tr class=' module-item'>
-                        <td><a class='mod' href='credentials/index.html'
-                               title='rusoto::credentials'>credentials</a></td>
-                        <td class='docblock short'>
-                             <p>AWS credentials: sourcing and supplying for signed requests</p>
-                        </td>
-                    </tr>
-                
-                    <tr class=' module-item'>
-                        <td><a class='mod' href='dynamodb/index.html'
-                               title='rusoto::dynamodb'>dynamodb</a></td>
-                        <td class='docblock short'>
-                             <p>DynamoDB bindings for Rust</p>
-                        </td>
-                    </tr>
-                
-                    <tr class=' module-item'>
-                        <td><a class='mod' href='ecs/index.html'
-                               title='rusoto::ecs'>ecs</a></td>
-                        <td class='docblock short'>
-                             <p><a href="https://aws.amazon.com/ecs/">ECS</a> bindings for Rust</p>
-                        </td>
-                    </tr>
-                
-                    <tr class=' module-item'>
-                        <td><a class='mod' href='error/index.html'
-                               title='rusoto::error'>error</a></td>
-                        <td class='docblock short'>
-                             <p>Errors during AWS communication or parsing</p>
-                        </td>
-                    </tr>
-                
-                    <tr class=' module-item'>
-                        <td><a class='mod' href='kms/index.html'
-                               title='rusoto::kms'>kms</a></td>
-                        <td class='docblock short'>
-                             <p>KMS bindings for Rust</p>
-                        </td>
-                    </tr>
-                
-                    <tr class=' module-item'>
-                        <td><a class='mod' href='params/index.html'
-                               title='rusoto::params'>params</a></td>
-                        <td class='docblock short'>
-                             <p>Parameters for talking to SQS</p>
-                        </td>
-                    </tr>
-                
-                    <tr class=' module-item'>
-                        <td><a class='mod' href='regions/index.html'
-                               title='rusoto::regions'>regions</a></td>
-                        <td class='docblock short'>
-                             <p>AWS Regions and helper functions</p>
-                        </td>
-                    </tr>
-                
-                    <tr class=' module-item'>
-                        <td><a class='mod' href='request/index.html'
-                               title='rusoto::request'>request</a></td>
-                        <td class='docblock short'>
-                             <p>A request to AWS, pre-signed</p>
-                        </td>
-                    </tr>
-                
-                    <tr class=' module-item'>
-                        <td><a class='mod' href='s3/index.html'
-                               title='rusoto::s3'>s3</a></td>
-                        <td class='docblock short'>
-                             <p>S3 bindings for Rust</p>
-                        </td>
-                    </tr>
-                
-                    <tr class=' module-item'>
-                        <td><a class='mod' href='signature/index.html'
-                               title='rusoto::signature'>signature</a></td>
-                        <td class='docblock short'>
-                             <p>Tools for signing a request to AWS</p>
-                        </td>
-                    </tr>
-                
-                    <tr class=' module-item'>
-                        <td><a class='mod' href='sqs/index.html'
-                               title='rusoto::sqs'>sqs</a></td>
-                        <td class='docblock short'>
-                             <p>SQS bindings for Rust</p>
-                        </td>
-                    </tr>
-                
-                    <tr class=' module-item'>
-                        <td><a class='mod' href='xmlutil/index.html'
-                               title='rusoto::xmlutil'>xmlutil</a></td>
-                        <td class='docblock short'>
-                             <p>Tools for handling XML from AWS with helper functions for testing</p>
-                        </td>
-                    </tr>
-                </table><h2 id='macros' class='section-header'><a href="#macros">Macros</a></h2>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='dynamodb/index.html'
+                                  title='rusoto::dynamodb'>dynamodb</a></td>
+                           <td class='docblock short'>
+                                <p>Amazon DynamoDB</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='ec2/index.html'
+                                  title='rusoto::ec2'>ec2</a></td>
+                           <td class='docblock short'>
+                                <p>Amazon EC2 Container Service</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='ecs/index.html'
+                                  title='rusoto::ecs'>ecs</a></td>
+                           <td class='docblock short'>
+                                <p>Amazon EC2 Container Service</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='ets/index.html'
+                                  title='rusoto::ets'>ets</a></td>
+                           <td class='docblock short'>
+                                <p>Amazon Elastic Transcoder</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='firehose/index.html'
+                                  title='rusoto::firehose'>firehose</a></td>
+                           <td class='docblock short'>
+                                <p>Amazon Kinesis Firehose</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='kinesis/index.html'
+                                  title='rusoto::kinesis'>kinesis</a></td>
+                           <td class='docblock short'>
+                                <p>Amazon Kinesis</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='kms/index.html'
+                                  title='rusoto::kms'>kms</a></td>
+                           <td class='docblock short'>
+                                <p>AWS Key Management Service</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='s3/index.html'
+                                  title='rusoto::s3'>s3</a></td>
+                           <td class='docblock short'>
+                                <p>The AWS S3 API.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='sqs/index.html'
+                                  title='rusoto::sqs'>sqs</a></td>
+                           <td class='docblock short'>
+                                <p>The AWS SQS API.</p>
+                           </td>
+                       </tr></table><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
 <table>
-                    <tr class=' module-item'>
-                        <td><a class='macro' href='macro.attributes!.html'
-                               title='rusoto::attributes!'>attributes!</a></td>
-                        <td class='docblock short'>
-                             
-                        </td>
-                    </tr>
-                
-                    <tr class=' module-item'>
-                        <td><a class='macro' href='macro.key_schema!.html'
-                               title='rusoto::key_schema!'>key_schema!</a></td>
-                        <td class='docblock short'>
-                             
-                        </td>
-                    </tr>
-                
-                    <tr class=' module-item'>
-                        <td><a class='macro' href='macro.val!.html'
-                               title='rusoto::val!'>val!</a></td>
-                        <td class='docblock short'>
-                             
-                        </td>
-                    </tr>
-                </table></section>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.AwsCredentials.html'
+                                  title='rusoto::AwsCredentials'>AwsCredentials</a></td>
+                           <td class='docblock short'>
+                                <p>AWS API access credentials, including access key, secret key, token (for IAM profiles), and
+expiration timestamp.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.AwsError.html'
+                                  title='rusoto::AwsError'>AwsError</a></td>
+                           <td class='docblock short'>
+                                <p>An error produced when AWS API calls are unsuccessful.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ChainProvider.html'
+                                  title='rusoto::ChainProvider'>ChainProvider</a></td>
+                           <td class='docblock short'>
+                                <p>Provides AWS credentials from multiple possible sources using a priority order.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.EnvironmentProvider.html'
+                                  title='rusoto::EnvironmentProvider'>EnvironmentProvider</a></td>
+                           <td class='docblock short'>
+                                <p>Provides AWS credentials from environment variables.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.IamProvider.html'
+                                  title='rusoto::IamProvider'>IamProvider</a></td>
+                           <td class='docblock short'>
+                                <p>Provides AWS credentials from a resource&#39;s IAM role.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ParseRegionError.html'
+                                  title='rusoto::ParseRegionError'>ParseRegionError</a></td>
+                           <td class='docblock short'>
+                                <p>An error produced when attempting to convert a <code>str</code> into a <code>Region</code> fails.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ProfileProvider.html'
+                                  title='rusoto::ProfileProvider'>ProfileProvider</a></td>
+                           <td class='docblock short'>
+                                <p>Provides AWS credentials from a profile in a credentials file.</p>
+                           </td>
+                       </tr></table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.Region.html'
+                                  title='rusoto::Region'>Region</a></td>
+                           <td class='docblock short'>
+                                <p>An AWS region.</p>
+                           </td>
+                       </tr></table><h2 id='traits' class='section-header'><a href="#traits">Traits</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class='trait' href='trait.ProvideAwsCredentials.html'
+                                  title='rusoto::ProvideAwsCredentials'>ProvideAwsCredentials</a></td>
+                           <td class='docblock short'>
+                                <p>A trait for types that produce <code>AwsCredentials</code>.</p>
+                           </td>
+                       </tr></table><h2 id='types' class='section-header'><a href="#types">Type Definitions</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.AwsResult.html'
+                                  title='rusoto::AwsResult'>AwsResult</a></td>
+                           <td class='docblock short'>
+                                <p>The result type produced by AWS API calls.</p>
+                           </td>
+                       </tr></table></section>
     <section id='search' class="content hidden"></section>
 
     <section class="footer"></section>
@@ -215,6 +212,8 @@ to sign requests.</p>
                     <dd>Move down in search results</dd>
                     <dt>&#9166;</dt>
                     <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
                 </dl>
             </div>
 

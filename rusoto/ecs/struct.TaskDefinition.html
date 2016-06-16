@@ -11,6 +11,7 @@
 
     <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
     <link rel="stylesheet" type="text/css" href="../../main.css">
+    
 
     
     
@@ -43,48 +44,40 @@
 
     <section id='main' class="content struct">
 <h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>rusoto</a>::<wbr><a href='index.html'>ecs</a>::<wbr><a class='struct' href=''>TaskDefinition</a></span><span class='out-of-band'><span id='render-detail'>
-            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
-                [<span class='inner'>&#x2212;</span>]
-            </a>
-        </span><a id='src-17144' class='srclink' href='../../src/rusoto///Users/jimmy/Code/rusoto/target/debug/build/rusoto-27b53b229e74877b/out/ecs.rs.html#13801-13827' title='goto source code'>[src]</a></span></h1>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-61759' class='srclink' href='../../src/rusoto/home/adimarco/code/rusoto/target/debug/build/rusoto-9b092785f15fdaf7/out/ecs.rs.html#22146-22173' title='goto source code'>[src]</a></span></h1>
 <pre class='rust struct'>pub struct TaskDefinition {
-    pub status: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/ecs/type.TaskDefinitionStatus.html' title='rusoto::ecs::TaskDefinitionStatus'>TaskDefinitionStatus</a>&gt;,
+    pub container_definitions: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/ecs/type.ContainerDefinitions.html' title='rusoto::ecs::ContainerDefinitions'>ContainerDefinitions</a>&gt;,
     pub family: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;,
-    pub requiresAttributes: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/ecs/type.RequiresAttributes.html' title='rusoto::ecs::RequiresAttributes'>RequiresAttributes</a>&gt;,
-    pub volumes: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/ecs/type.VolumeList.html' title='rusoto::ecs::VolumeList'>VolumeList</a>&gt;,
-    pub taskDefinitionArn: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;,
-    pub containerDefinitions: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/ecs/type.ContainerDefinitions.html' title='rusoto::ecs::ContainerDefinitions'>ContainerDefinitions</a>&gt;,
+    pub requires_attributes: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/ecs/type.RequiresAttributes.html' title='rusoto::ecs::RequiresAttributes'>RequiresAttributes</a>&gt;,
     pub revision: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/ecs/type.Integer.html' title='rusoto::ecs::Integer'>Integer</a>&gt;,
+    pub status: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/ecs/type.TaskDefinitionStatus.html' title='rusoto::ecs::TaskDefinitionStatus'>TaskDefinitionStatus</a>&gt;,
+    pub task_definition_arn: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;,
+    pub volumes: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/ecs/type.VolumeList.html' title='rusoto::ecs::VolumeList'>VolumeList</a>&gt;,
 }</pre><div class='docblock'><p>Details of a task definition.</p>
-</div><h2 class='fields'>Fields</h2>
-<table><tr class='stab '>
-                                  <td id='structfield.status'><code>status</code></td><td><div class='docblock'><p>The status of the task definition.</p>
-</div></td></tr><tr class='stab '>
-                                  <td id='structfield.family'><code>family</code></td><td><div class='docblock'><p>The family of your task definition, used as the definition name.</p>
-</div></td></tr><tr class='stab '>
-                                  <td id='structfield.requiresAttributes'><code>requiresAttributes</code></td><td><div class='docblock'><p>The container instance attributes required by your task.</p>
-</div></td></tr><tr class='stab '>
-                                  <td id='structfield.volumes'><code>volumes</code></td><td><div class='docblock'><p>The list of volumes in a task. For more information about volume definition
-parameters and defaults, see <a href="http://docs.aws.ama%0Azon.com/AmazonECS/latest/developerguide/task_defintions.html">Amazon ECS Task Definitions</a> in the <em>Amazon
-EC2 Container Service Developer Guide</em>.</p>
-</div></td></tr><tr class='stab '>
-                                  <td id='structfield.taskDefinitionArn'><code>taskDefinitionArn</code></td><td><div class='docblock'><p>The full Amazon Resource Name (ARN) of the of the task definition.</p>
-</div></td></tr><tr class='stab '>
-                                  <td id='structfield.containerDefinitions'><code>containerDefinitions</code></td><td><div class='docblock'><p>A list of container definitions in JSON format that describe the different
-containers that make up your task. For more information about container
-definition parameters and defaults, see <a href="http://d%0Aocs.aws.amazon.com/AmazonECS/latest/developerguide/task_defintions.html">Amazon ECS Task Definitions</a> in
-the <em>Amazon EC2 Container Service Developer Guide</em>.</p>
-</div></td></tr><tr class='stab '>
-                                  <td id='structfield.revision'><code>revision</code></td><td><div class='docblock'><p>The revision of the task in a particular family. The revision is a version
-number of a task definition in a family. When you register a task definition
-for the first time, the revision is <code>1</code>; each time you register a new revision
-of a task definition in the same family, the revision value always increases
-by one (even if you have deregistered previous revisions in this family).</p>
-</div></td></tr></table><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><code>impl <a class='trait' href='https://serde-rs.github.io/serde/serde/serde/ser/trait.Serialize.html' title='serde::ser::Serialize'>Serialize</a> for <a class='struct' href='../../rusoto/ecs/struct.TaskDefinition.html' title='rusoto::ecs::TaskDefinition'>TaskDefinition</a></code></h3><div class='impl-items'><h4 id='method.serialize' class='method'><code>fn <a href='https://serde-rs.github.io/serde/serde/serde/ser/trait.Serialize.html#method.serialize' class='fnname'>serialize</a>&lt;__S&gt;(&amp;self, serializer: &amp;mut __S) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>, __S::Error&gt; <span class='where'>where __S: <a class='trait' href='https://serde-rs.github.io/serde/serde/serde/ser/trait.Serializer.html' title='serde::ser::Serializer'>Serializer</a></span></code></h4>
-</div><h3 class='impl'><code>impl <a class='trait' href='https://serde-rs.github.io/serde/serde/serde/de/trait.Deserialize.html' title='serde::de::Deserialize'>Deserialize</a> for <a class='struct' href='../../rusoto/ecs/struct.TaskDefinition.html' title='rusoto::ecs::TaskDefinition'>TaskDefinition</a></code></h3><div class='impl-items'><h4 id='method.deserialize' class='method'><code>fn <a href='https://serde-rs.github.io/serde/serde/serde/de/trait.Deserialize.html#method.deserialize' class='fnname'>deserialize</a>&lt;__D&gt;(deserializer: &amp;mut __D) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a class='struct' href='../../rusoto/ecs/struct.TaskDefinition.html' title='rusoto::ecs::TaskDefinition'>TaskDefinition</a>, __D::Error&gt; <span class='where'>where __D: <a class='trait' href='https://serde-rs.github.io/serde/serde/serde/de/trait.Deserializer.html' title='serde::de::Deserializer'>Deserializer</a></span></code></h4>
-</div><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html' title='core::default::Default'>Default</a> for <a class='struct' href='../../rusoto/ecs/struct.TaskDefinition.html' title='rusoto::ecs::TaskDefinition'>TaskDefinition</a></code></h3><div class='impl-items'><h4 id='method.default' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html#method.default' class='fnname'>default</a>() -&gt; <a class='struct' href='../../rusoto/ecs/struct.TaskDefinition.html' title='rusoto::ecs::TaskDefinition'>TaskDefinition</a></code></h4>
-</div><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='struct' href='../../rusoto/ecs/struct.TaskDefinition.html' title='rusoto::ecs::TaskDefinition'>TaskDefinition</a></code></h3><div class='impl-items'><h4 id='method.fmt' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#method.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
-</div></section>
+</div><h2 class='fields'>Fields</h2><span id='structfield.container_definitions'><code>container_definitions: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/ecs/type.ContainerDefinitions.html' title='rusoto::ecs::ContainerDefinitions'>ContainerDefinitions</a>&gt;</code></span>
+                           <span class='stab '></span><div class='docblock'><p>A list of container definitions in JSON format that describe the different containers that make up your task. For more information about container definition parameters and defaults, see <a href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_defintions.html">Amazon ECS Task Definitions</a> in the <i>Amazon EC2 Container Service Developer Guide</i>.</p>
+</div><span id='structfield.family'><code>family: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;</code></span>
+                           <span class='stab '></span><div class='docblock'><p>The family of your task definition, used as the definition name.</p>
+</div><span id='structfield.requires_attributes'><code>requires_attributes: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/ecs/type.RequiresAttributes.html' title='rusoto::ecs::RequiresAttributes'>RequiresAttributes</a>&gt;</code></span>
+                           <span class='stab '></span><div class='docblock'><p>The container instance attributes required by your task.</p>
+</div><span id='structfield.revision'><code>revision: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/ecs/type.Integer.html' title='rusoto::ecs::Integer'>Integer</a>&gt;</code></span>
+                           <span class='stab '></span><div class='docblock'><p>The revision of the task in a particular family. The revision is a version number of a task definition in a family. When you register a task definition for the first time, the revision is <code>1</code>; each time you register a new revision of a task definition in the same family, the revision value always increases by one (even if you have deregistered previous revisions in this family).</p>
+</div><span id='structfield.status'><code>status: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/ecs/type.TaskDefinitionStatus.html' title='rusoto::ecs::TaskDefinitionStatus'>TaskDefinitionStatus</a>&gt;</code></span>
+                           <span class='stab '></span><div class='docblock'><p>The status of the task definition.</p>
+</div><span id='structfield.task_definition_arn'><code>task_definition_arn: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;</code></span>
+                           <span class='stab '></span><div class='docblock'><p>The full Amazon Resource Name (ARN) of the of the task definition.</p>
+</div><span id='structfield.volumes'><code>volumes: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/ecs/type.VolumeList.html' title='rusoto::ecs::VolumeList'>VolumeList</a>&gt;</code></span>
+                           <span class='stab '></span><div class='docblock'><p>The list of volumes in a task. For more information about volume definition parameters and defaults, see <a href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_defintions.html">Amazon ECS Task Definitions</a> in the <i>Amazon EC2 Container Service Developer Guide</i>.</p>
+</div><h2 id='implementations'>Trait Implementations</h2><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='struct' href='../../rusoto/ecs/struct.TaskDefinition.html' title='rusoto::ecs::TaskDefinition'>TaskDefinition</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-61767' class='srclink' href='../../src/rusoto/home/adimarco/code/rusoto/target/debug/build/rusoto-9b092785f15fdaf7/out/ecs.rs.html#22145' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
+<div class='docblock'><p>Formats the value using the given formatter.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html' title='core::default::Default'>Default</a> for <a class='struct' href='../../rusoto/ecs/struct.TaskDefinition.html' title='rusoto::ecs::TaskDefinition'>TaskDefinition</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-61779' class='srclink' href='../../src/rusoto/home/adimarco/code/rusoto/target/debug/build/rusoto-9b092785f15fdaf7/out/ecs.rs.html#22145' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.default' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html#tymethod.default' class='fnname'>default</a>() -&gt; <a class='struct' href='../../rusoto/ecs/struct.TaskDefinition.html' title='rusoto::ecs::TaskDefinition'>TaskDefinition</a></code></h4>
+<div class='docblock'><p>Returns the &quot;default value&quot; for a type. <a href="https://doc.rust-lang.org/nightly/core/default/trait.Default.html#tymethod.default">Read more</a></p>
+</div></div></section>
     <section id='search' class="content hidden"></section>
 
     <section class="footer"></section>
@@ -107,6 +100,8 @@ by one (even if you have deregistered previous revisions in this family).</p>
                     <dd>Move down in search results</dd>
                     <dt>&#9166;</dt>
                     <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
                 </dl>
             </div>
 

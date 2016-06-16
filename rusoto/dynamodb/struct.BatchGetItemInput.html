@@ -11,6 +11,7 @@
 
     <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
     <link rel="stylesheet" type="text/css" href="../../main.css">
+    
 
     
     
@@ -43,64 +44,24 @@
 
     <section id='main' class="content struct">
 <h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>rusoto</a>::<wbr><a href='index.html'>dynamodb</a>::<wbr><a class='struct' href=''>BatchGetItemInput</a></span><span class='out-of-band'><span id='render-detail'>
-            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
-                [<span class='inner'>&#x2212;</span>]
-            </a>
-        </span><a id='src-1270' class='srclink' href='../../src/rusoto///Users/jimmy/Code/rusoto/target/debug/build/rusoto-27b53b229e74877b/out/dynamodb.rs.html#1701-1750' title='goto source code'>[src]</a></span></h1>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-1405' class='srclink' href='../../src/rusoto/home/adimarco/code/rusoto/target/debug/build/rusoto-9b092785f15fdaf7/out/dynamodb.rs.html#1146-1153' title='goto source code'>[src]</a></span></h1>
 <pre class='rust struct'>pub struct BatchGetItemInput {
-    pub RequestItems: <a class='type' href='../../rusoto/dynamodb/type.BatchGetRequestMap.html' title='rusoto::dynamodb::BatchGetRequestMap'>BatchGetRequestMap</a>,
-    pub ReturnConsumedCapacity: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/dynamodb/type.ReturnConsumedCapacity.html' title='rusoto::dynamodb::ReturnConsumedCapacity'>ReturnConsumedCapacity</a>&gt;,
-}</pre><div class='docblock'><p>Represents the input of a <em>BatchGetItem</em> operation.</p>
-</div><h2 class='fields'>Fields</h2>
-<table><tr class='stab '>
-                                  <td id='structfield.RequestItems'><code>RequestItems</code></td><td><div class='docblock'><p>A map of one or more table names and, for each table, a map that describes one
-or more items to retrieve from that table. Each table name can be used only
-once per <em>BatchGetItem</em> request.
-Each element in the map of items to retrieve consists of the following:
-  * <em>ConsistentRead</em> - If <code>true</code>, a strongly consistent read is used; if <code>false</code> (the default), an eventually consistent read is used.
-  * <em>ExpressionAttributeNames</em> - One or more substitution tokens for attribute names in the <em>ProjectionExpression</em> parameter. The following are some use cases for using <em>ExpressionAttributeNames</em>:
-    * To access an attribute whose name conflicts with a DynamoDB reserved word.
-    * To create a placeholder for repeating occurrences of an attribute name in an expression.
-    * To prevent special characters in an attribute name from being misinterpreted in an expression.
-Use the <strong>#</strong> character in an expression to dereference an attribute name. For
-example, consider the following attribute name:
-    * <code>Percentile</code>
-The name of this attribute conflicts with a reserved word, so it cannot be
-used directly in an expression. (For the complete list of reserved words, see
-<a href="http://docs.aws.amazon.com/amazondynamodb/latest/developergui%0Ade/ReservedWords.html">Reserved Words</a> in the <em>Amazon DynamoDB Developer Guide</em>). To work
-around this, you could specify the following for <em>ExpressionAttributeNames</em>:
-    * <code>{&quot;#P&quot;:&quot;Percentile&quot;}</code>
-You could then use this substitution in an expression, as in this example:
-    * <code>#P = :val</code>
-Tokens that begin with the <strong>:</strong> character are <em>expression attribute values</em>,
-which are placeholders for the actual value at runtime.
-For more information on expression attribute names, see <a href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Expressi%0Aons.AccessingItemAttributes.html">Accessing Item Attrib
-utes</a> in the <em>Amazon DynamoDB Developer Guide</em>.
-  * <em>Keys</em> - An array of primary key attribute values that define specific items in the table. For each primary key, you must provide <em>all</em> of the key attributes. For example, with a hash type primary key, you only need to provide the hash attribute. For a hash-and-range type primary key, you must provide <em>both</em> the hash attribute and the range attribute.
-  * <em>ProjectionExpression</em> - A string that identifies one or more attributes to retrieve from the table. These attributes can include scalars, sets, or elements of a JSON document. The attributes in the expression must be separated by commas.
-If no attribute names are specified, then all attributes will be returned. If
-any of the requested attributes are not found, they will not appear in the
-result.
-For more information, see <a href="http://docs.aws.amazon.c%0Aom/amazondynamodb/latest/developerguide/Expressions.AccessingItemAttributes.ht%0Aml">Accessing Item Attributes</a> in the <em>Amazon DynamoDB Developer Guide</em>.
-  * <em>AttributesToGet</em> - 
-This is a legacy parameter, for backward compatibility. New applications
-should use <em>ProjectionExpression</em> instead. Do not combine legacy parameters
-and expression parameters in a single API call; otherwise, DynamoDB will
-return a <em>ValidationException</em> exception.
-This parameter allows you to retrieve attributes of type List or Map; however,
-it cannot retrieve individual elements within a List or a Map.
-The names of one or more attributes to retrieve. If no attribute names are
-provided, then all attributes will be returned. If any of the requested
-attributes are not found, they will not appear in the result.
-Note that <em>AttributesToGet</em> has no effect on provisioned throughput
-consumption. DynamoDB determines capacity units consumed based on item size,
-not on the amount of data that is returned to an application.</p>
-</div></td></tr><tr class='stab '>
-                                  <td id='structfield.ReturnConsumedCapacity'><code>ReturnConsumedCapacity</code></td><td></td></tr></table><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><code>impl <a class='trait' href='https://serde-rs.github.io/serde/serde/serde/ser/trait.Serialize.html' title='serde::ser::Serialize'>Serialize</a> for <a class='struct' href='../../rusoto/dynamodb/struct.BatchGetItemInput.html' title='rusoto::dynamodb::BatchGetItemInput'>BatchGetItemInput</a></code></h3><div class='impl-items'><h4 id='method.serialize' class='method'><code>fn <a href='https://serde-rs.github.io/serde/serde/serde/ser/trait.Serialize.html#method.serialize' class='fnname'>serialize</a>&lt;__S&gt;(&amp;self, serializer: &amp;mut __S) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>, __S::Error&gt; <span class='where'>where __S: <a class='trait' href='https://serde-rs.github.io/serde/serde/serde/ser/trait.Serializer.html' title='serde::ser::Serializer'>Serializer</a></span></code></h4>
-</div><h3 class='impl'><code>impl <a class='trait' href='https://serde-rs.github.io/serde/serde/serde/de/trait.Deserialize.html' title='serde::de::Deserialize'>Deserialize</a> for <a class='struct' href='../../rusoto/dynamodb/struct.BatchGetItemInput.html' title='rusoto::dynamodb::BatchGetItemInput'>BatchGetItemInput</a></code></h3><div class='impl-items'><h4 id='method.deserialize' class='method'><code>fn <a href='https://serde-rs.github.io/serde/serde/serde/de/trait.Deserialize.html#method.deserialize' class='fnname'>deserialize</a>&lt;__D&gt;(deserializer: &amp;mut __D) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a class='struct' href='../../rusoto/dynamodb/struct.BatchGetItemInput.html' title='rusoto::dynamodb::BatchGetItemInput'>BatchGetItemInput</a>, __D::Error&gt; <span class='where'>where __D: <a class='trait' href='https://serde-rs.github.io/serde/serde/serde/de/trait.Deserializer.html' title='serde::de::Deserializer'>Deserializer</a></span></code></h4>
-</div><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html' title='core::default::Default'>Default</a> for <a class='struct' href='../../rusoto/dynamodb/struct.BatchGetItemInput.html' title='rusoto::dynamodb::BatchGetItemInput'>BatchGetItemInput</a></code></h3><div class='impl-items'><h4 id='method.default' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html#method.default' class='fnname'>default</a>() -&gt; <a class='struct' href='../../rusoto/dynamodb/struct.BatchGetItemInput.html' title='rusoto::dynamodb::BatchGetItemInput'>BatchGetItemInput</a></code></h4>
-</div><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='struct' href='../../rusoto/dynamodb/struct.BatchGetItemInput.html' title='rusoto::dynamodb::BatchGetItemInput'>BatchGetItemInput</a></code></h3><div class='impl-items'><h4 id='method.fmt' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#method.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
-</div></section>
+    pub request_items: <a class='type' href='../../rusoto/dynamodb/type.BatchGetRequestMap.html' title='rusoto::dynamodb::BatchGetRequestMap'>BatchGetRequestMap</a>,
+    pub return_consumed_capacity: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/dynamodb/type.ReturnConsumedCapacity.html' title='rusoto::dynamodb::ReturnConsumedCapacity'>ReturnConsumedCapacity</a>&gt;,
+}</pre><div class='docblock'><p>Represents the input of a <i>BatchGetItem</i> operation.</p>
+</div><h2 class='fields'>Fields</h2><span id='structfield.request_items'><code>request_items: <a class='type' href='../../rusoto/dynamodb/type.BatchGetRequestMap.html' title='rusoto::dynamodb::BatchGetRequestMap'>BatchGetRequestMap</a></code></span>
+                           <span class='stab '></span><div class='docblock'><p><p>A map of one or more table names and, for each table, a map that describes one or more items to retrieve from that table. Each table name can be used only once per <i>BatchGetItem</i> request.</p> <p>Each element in the map of items to retrieve consists of the following:</p> <ul> <li> <p><i>ConsistentRead</i> - If <code>true</code>, a strongly consistent read is used; if <code>false</code> (the default), an eventually consistent read is used.</p> </li> <li> <p> <i>ExpressionAttributeNames</i> - One or more substitution tokens for attribute names in the <i>ProjectionExpression</i> parameter. The following are some use cases for using <i>ExpressionAttributeNames</i>:</p> <ul> <li> <p>To access an attribute whose name conflicts with a DynamoDB reserved word.</p> </li> <li> <p>To create a placeholder for repeating occurrences of an attribute name in an expression.</p> </li> <li> <p>To prevent special characters in an attribute name from being misinterpreted in an expression.</p> </li> </ul> <p>Use the <b>#</b> character in an expression to dereference an attribute name. For example, consider the following attribute name:</p> <ul><li><p><code>Percentile</code></p></li></ul> <p>The name of this attribute conflicts with a reserved word, so it cannot be used directly in an expression. (For the complete list of reserved words, see <a href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/ReservedWords.html">Reserved Words</a> in the <i>Amazon DynamoDB Developer Guide</i>). To work around this, you could specify the following for <i>ExpressionAttributeNames</i>:</p> <ul><li><p><code>{&quot;#P&quot;:&quot;Percentile&quot;}</code></p></li></ul> <p>You could then use this substitution in an expression, as in this example:</p> <ul><li><p><code>#P = :val</code></p></li></ul> <note><p>Tokens that begin with the <b>:</b> character are <i>expression attribute values</i>, which are placeholders for the actual value at runtime.</p></note> <p>For more information on expression attribute names, see <a href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Expressions.AccessingItemAttributes.html">Accessing Item Attributes</a> in the <i>Amazon DynamoDB Developer Guide</i>.</p> </li> <li> <p><i>Keys</i> - An array of primary key attribute values that define specific items in the table. For each primary key, you must provide <i>all</i> of the key attributes. For example, with a simple primary key, you only need to provide the partition key value. For a composite key, you must provide <i>both</i> the partition key value and the sort key value.</p> </li> <li> <p><i>ProjectionExpression</i> - A string that identifies one or more attributes to retrieve from the table. These attributes can include scalars, sets, or elements of a JSON document. The attributes in the expression must be separated by commas.</p> <p>If no attribute names are specified, then all attributes will be returned. If any of the requested attributes are not found, they will not appear in the result.</p> <p>For more information, see <a href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Expressions.AccessingItemAttributes.html">Accessing Item Attributes</a> in the <i>Amazon DynamoDB Developer Guide</i>.</p> </li> <li> <p> <i>AttributesToGet</i> - </p> <important> <p>This is a legacy parameter, for backward compatibility. New applications should use <i>ProjectionExpression</i> instead. Do not combine legacy parameters and expression parameters in a single API call; otherwise, DynamoDB will return a <i>ValidationException</i> exception.</p> <p>This parameter allows you to retrieve attributes of type List or Map; however, it cannot retrieve individual elements within a List or a Map.</p></important> <p>The names of one or more attributes to retrieve. If no attribute names are provided, then all attributes will be returned. If any of the requested attributes are not found, they will not appear in the result.</p> <p>Note that <i>AttributesToGet</i> has no effect on provisioned throughput consumption. DynamoDB determines capacity units consumed based on item size, not on the amount of data that is returned to an application.</p> </li> </ul></p>
+</div><span id='structfield.return_consumed_capacity'><code>return_consumed_capacity: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/dynamodb/type.ReturnConsumedCapacity.html' title='rusoto::dynamodb::ReturnConsumedCapacity'>ReturnConsumedCapacity</a>&gt;</code></span>
+                           <span class='stab '></span><h2 id='implementations'>Trait Implementations</h2><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='struct' href='../../rusoto/dynamodb/struct.BatchGetItemInput.html' title='rusoto::dynamodb::BatchGetItemInput'>BatchGetItemInput</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-1408' class='srclink' href='../../src/rusoto/home/adimarco/code/rusoto/target/debug/build/rusoto-9b092785f15fdaf7/out/dynamodb.rs.html#1145' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
+<div class='docblock'><p>Formats the value using the given formatter.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html' title='core::default::Default'>Default</a> for <a class='struct' href='../../rusoto/dynamodb/struct.BatchGetItemInput.html' title='rusoto::dynamodb::BatchGetItemInput'>BatchGetItemInput</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-1415' class='srclink' href='../../src/rusoto/home/adimarco/code/rusoto/target/debug/build/rusoto-9b092785f15fdaf7/out/dynamodb.rs.html#1145' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.default' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html#tymethod.default' class='fnname'>default</a>() -&gt; <a class='struct' href='../../rusoto/dynamodb/struct.BatchGetItemInput.html' title='rusoto::dynamodb::BatchGetItemInput'>BatchGetItemInput</a></code></h4>
+<div class='docblock'><p>Returns the &quot;default value&quot; for a type. <a href="https://doc.rust-lang.org/nightly/core/default/trait.Default.html#tymethod.default">Read more</a></p>
+</div></div></section>
     <section id='search' class="content hidden"></section>
 
     <section class="footer"></section>
@@ -123,6 +84,8 @@ not on the amount of data that is returned to an application.</p>
                     <dd>Move down in search results</dd>
                     <dt>&#9166;</dt>
                     <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
                 </dl>
             </div>
 

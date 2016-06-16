@@ -11,6 +11,7 @@
 
     <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
     <link rel="stylesheet" type="text/css" href="../../main.css">
+    
 
     
     
@@ -43,25 +44,25 @@
 
     <section id='main' class="content struct">
 <h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>rusoto</a>::<wbr><a href='index.html'>sqs</a>::<wbr><a class='struct' href=''>SendMessageBatchResult</a></span><span class='out-of-band'><span id='render-detail'>
-            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
-                [<span class='inner'>&#x2212;</span>]
-            </a>
-        </span><a id='src-30297' class='srclink' href='../../src/rusoto///Users/jimmy/Code/rusoto/target/debug/build/rusoto-27b53b229e74877b/out/sqs.rs.html#320-326' title='goto source code'>[src]</a></span></h1>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-106694' class='srclink' href='../../src/rusoto/home/adimarco/code/rusoto/target/debug/build/rusoto-9b092785f15fdaf7/out/sqs.rs.html#3041-3049' title='goto source code'>[src]</a></span></h1>
 <pre class='rust struct'>pub struct SendMessageBatchResult {
-    pub successful: <a class='type' href='../../rusoto/sqs/type.SendMessageBatchResultEntryList.html' title='rusoto::sqs::SendMessageBatchResultEntryList'>SendMessageBatchResultEntryList</a>,
     pub failed: <a class='type' href='../../rusoto/sqs/type.BatchResultErrorEntryList.html' title='rusoto::sqs::BatchResultErrorEntryList'>BatchResultErrorEntryList</a>,
-}</pre><div class='docblock'><p>For each message in the batch, the response contains a
-SendMessageBatchResultEntry tag if the message succeeds or a
-BatchResultErrorEntry tag if the message fails.</p>
-</div><h2 class='fields'>Fields</h2>
-<table><tr class='stab '>
-                                  <td id='structfield.successful'><code>successful</code></td><td><div class='docblock'><p>A list of SendMessageBatchResultEntry items.</p>
-</div></td></tr><tr class='stab '>
-                                  <td id='structfield.failed'><code>failed</code></td><td><div class='docblock'><p>A list of BatchResultErrorEntry items with the error detail about each message
-that could not be enqueued.</p>
-</div></td></tr></table><h2 id='implementations'>Trait Implementations</h2><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html' title='core::default::Default'>Default</a> for <a class='struct' href='../../rusoto/sqs/struct.SendMessageBatchResult.html' title='rusoto::sqs::SendMessageBatchResult'>SendMessageBatchResult</a></code></h3><div class='impl-items'><h4 id='method.default' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html#method.default' class='fnname'>default</a>() -&gt; <a class='struct' href='../../rusoto/sqs/struct.SendMessageBatchResult.html' title='rusoto::sqs::SendMessageBatchResult'>SendMessageBatchResult</a></code></h4>
-</div><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='struct' href='../../rusoto/sqs/struct.SendMessageBatchResult.html' title='rusoto::sqs::SendMessageBatchResult'>SendMessageBatchResult</a></code></h3><div class='impl-items'><h4 id='method.fmt' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#method.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
-</div></section>
+    pub successful: <a class='type' href='../../rusoto/sqs/type.SendMessageBatchResultEntryList.html' title='rusoto::sqs::SendMessageBatchResultEntryList'>SendMessageBatchResultEntryList</a>,
+}</pre><div class='docblock'><p>For each message in the batch, the response contains a <a>SendMessageBatchResultEntry</a> tag if the message succeeds or a <a>BatchResultErrorEntry</a> tag if the message fails.</p>
+</div><h2 class='fields'>Fields</h2><span id='structfield.failed'><code>failed: <a class='type' href='../../rusoto/sqs/type.BatchResultErrorEntryList.html' title='rusoto::sqs::BatchResultErrorEntryList'>BatchResultErrorEntryList</a></code></span>
+                           <span class='stab '></span><div class='docblock'><p>A list of <a>BatchResultErrorEntry</a> items with the error detail about each message that could not be enqueued.</p>
+</div><span id='structfield.successful'><code>successful: <a class='type' href='../../rusoto/sqs/type.SendMessageBatchResultEntryList.html' title='rusoto::sqs::SendMessageBatchResultEntryList'>SendMessageBatchResultEntryList</a></code></span>
+                           <span class='stab '></span><div class='docblock'><p>A list of <a>SendMessageBatchResultEntry</a> items.</p>
+</div><h2 id='implementations'>Trait Implementations</h2><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='struct' href='../../rusoto/sqs/struct.SendMessageBatchResult.html' title='rusoto::sqs::SendMessageBatchResult'>SendMessageBatchResult</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-106697' class='srclink' href='../../src/rusoto/home/adimarco/code/rusoto/target/debug/build/rusoto-9b092785f15fdaf7/out/sqs.rs.html#3040' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
+<div class='docblock'><p>Formats the value using the given formatter.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html' title='core::default::Default'>Default</a> for <a class='struct' href='../../rusoto/sqs/struct.SendMessageBatchResult.html' title='rusoto::sqs::SendMessageBatchResult'>SendMessageBatchResult</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-106704' class='srclink' href='../../src/rusoto/home/adimarco/code/rusoto/target/debug/build/rusoto-9b092785f15fdaf7/out/sqs.rs.html#3040' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.default' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html#tymethod.default' class='fnname'>default</a>() -&gt; <a class='struct' href='../../rusoto/sqs/struct.SendMessageBatchResult.html' title='rusoto::sqs::SendMessageBatchResult'>SendMessageBatchResult</a></code></h4>
+<div class='docblock'><p>Returns the &quot;default value&quot; for a type. <a href="https://doc.rust-lang.org/nightly/core/default/trait.Default.html#tymethod.default">Read more</a></p>
+</div></div></section>
     <section id='search' class="content hidden"></section>
 
     <section class="footer"></section>
@@ -84,6 +85,8 @@ that could not be enqueued.</p>
                     <dd>Move down in search results</dd>
                     <dt>&#9166;</dt>
                     <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
                 </dl>
             </div>
 

@@ -11,6 +11,7 @@
 
     <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
     <link rel="stylesheet" type="text/css" href="../../main.css">
+    
 
     
     
@@ -43,53 +44,49 @@
 
     <section id='main' class="content struct">
 <h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>rusoto</a>::<wbr><a href='index.html'>dynamodb</a>::<wbr><a class='struct' href=''>AttributeValue</a></span><span class='out-of-band'><span id='render-detail'>
-            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
-                [<span class='inner'>&#x2212;</span>]
-            </a>
-        </span><a id='src-2386' class='srclink' href='../../src/rusoto///Users/jimmy/Code/rusoto/target/debug/build/rusoto-27b53b229e74877b/out/dynamodb.rs.html#3911-3932' title='goto source code'>[src]</a></span></h1>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-991' class='srclink' href='../../src/rusoto/home/adimarco/code/rusoto/target/debug/build/rusoto-9b092785f15fdaf7/out/dynamodb.rs.html#276-307' title='goto source code'>[src]</a></span></h1>
 <pre class='rust struct'>pub struct AttributeValue {
-    pub B: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/dynamodb/type.BinaryAttributeValue.html' title='rusoto::dynamodb::BinaryAttributeValue'>BinaryAttributeValue</a>&gt;,
-    pub NULL: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/dynamodb/type.NullAttributeValue.html' title='rusoto::dynamodb::NullAttributeValue'>NullAttributeValue</a>&gt;,
-    pub SS: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/dynamodb/type.StringSetAttributeValue.html' title='rusoto::dynamodb::StringSetAttributeValue'>StringSetAttributeValue</a>&gt;,
-    pub M: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/dynamodb/type.MapAttributeValue.html' title='rusoto::dynamodb::MapAttributeValue'>MapAttributeValue</a>&gt;,
-    pub L: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/dynamodb/type.ListAttributeValue.html' title='rusoto::dynamodb::ListAttributeValue'>ListAttributeValue</a>&gt;,
-    pub N: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/dynamodb/type.NumberAttributeValue.html' title='rusoto::dynamodb::NumberAttributeValue'>NumberAttributeValue</a>&gt;,
-    pub S: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/dynamodb/type.StringAttributeValue.html' title='rusoto::dynamodb::StringAttributeValue'>StringAttributeValue</a>&gt;,
-    pub BOOL: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/dynamodb/type.BooleanAttributeValue.html' title='rusoto::dynamodb::BooleanAttributeValue'>BooleanAttributeValue</a>&gt;,
-    pub BS: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/dynamodb/type.BinarySetAttributeValue.html' title='rusoto::dynamodb::BinarySetAttributeValue'>BinarySetAttributeValue</a>&gt;,
-    pub NS: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/dynamodb/type.NumberSetAttributeValue.html' title='rusoto::dynamodb::NumberSetAttributeValue'>NumberSetAttributeValue</a>&gt;,
-}</pre><div class='docblock'><p>Represents the data for an attribute. You can set one, and only one, of the
-elements.
-Each attribute in an item is a name-value pair. An attribute can be single-
-valued or multi-valued set. For example, a book item can have title and
-authors attributes. Each book has one title but can have many authors. The
-multi-valued attribute is a set; duplicate values are not allowed.</p>
-</div><h2 class='fields'>Fields</h2>
-<table><tr class='stab '>
-                                  <td id='structfield.B'><code>B</code></td><td><div class='docblock'><p>A Binary data type.</p>
-</div></td></tr><tr class='stab '>
-                                  <td id='structfield.NULL'><code>NULL</code></td><td><div class='docblock'><p>A Null data type.</p>
-</div></td></tr><tr class='stab '>
-                                  <td id='structfield.SS'><code>SS</code></td><td><div class='docblock'><p>A String Set data type.</p>
-</div></td></tr><tr class='stab '>
-                                  <td id='structfield.M'><code>M</code></td><td><div class='docblock'><p>A Map of attribute values.</p>
-</div></td></tr><tr class='stab '>
-                                  <td id='structfield.L'><code>L</code></td><td><div class='docblock'><p>A List of attribute values.</p>
-</div></td></tr><tr class='stab '>
-                                  <td id='structfield.N'><code>N</code></td><td><div class='docblock'><p>A Number data type.</p>
-</div></td></tr><tr class='stab '>
-                                  <td id='structfield.S'><code>S</code></td><td><div class='docblock'><p>A String data type.</p>
-</div></td></tr><tr class='stab '>
-                                  <td id='structfield.BOOL'><code>BOOL</code></td><td><div class='docblock'><p>A Boolean data type.</p>
-</div></td></tr><tr class='stab '>
-                                  <td id='structfield.BS'><code>BS</code></td><td><div class='docblock'><p>A Binary Set data type.</p>
-</div></td></tr><tr class='stab '>
-                                  <td id='structfield.NS'><code>NS</code></td><td><div class='docblock'><p>A Number Set data type.</p>
-</div></td></tr></table><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><code>impl <a class='trait' href='https://serde-rs.github.io/serde/serde/serde/ser/trait.Serialize.html' title='serde::ser::Serialize'>Serialize</a> for <a class='struct' href='../../rusoto/dynamodb/struct.AttributeValue.html' title='rusoto::dynamodb::AttributeValue'>AttributeValue</a></code></h3><div class='impl-items'><h4 id='method.serialize' class='method'><code>fn <a href='https://serde-rs.github.io/serde/serde/serde/ser/trait.Serialize.html#method.serialize' class='fnname'>serialize</a>&lt;__S&gt;(&amp;self, serializer: &amp;mut __S) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>, __S::Error&gt; <span class='where'>where __S: <a class='trait' href='https://serde-rs.github.io/serde/serde/serde/ser/trait.Serializer.html' title='serde::ser::Serializer'>Serializer</a></span></code></h4>
-</div><h3 class='impl'><code>impl <a class='trait' href='https://serde-rs.github.io/serde/serde/serde/de/trait.Deserialize.html' title='serde::de::Deserialize'>Deserialize</a> for <a class='struct' href='../../rusoto/dynamodb/struct.AttributeValue.html' title='rusoto::dynamodb::AttributeValue'>AttributeValue</a></code></h3><div class='impl-items'><h4 id='method.deserialize' class='method'><code>fn <a href='https://serde-rs.github.io/serde/serde/serde/de/trait.Deserialize.html#method.deserialize' class='fnname'>deserialize</a>&lt;__D&gt;(deserializer: &amp;mut __D) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a class='struct' href='../../rusoto/dynamodb/struct.AttributeValue.html' title='rusoto::dynamodb::AttributeValue'>AttributeValue</a>, __D::Error&gt; <span class='where'>where __D: <a class='trait' href='https://serde-rs.github.io/serde/serde/serde/de/trait.Deserializer.html' title='serde::de::Deserializer'>Deserializer</a></span></code></h4>
-</div><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html' title='core::default::Default'>Default</a> for <a class='struct' href='../../rusoto/dynamodb/struct.AttributeValue.html' title='rusoto::dynamodb::AttributeValue'>AttributeValue</a></code></h3><div class='impl-items'><h4 id='method.default' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html#method.default' class='fnname'>default</a>() -&gt; <a class='struct' href='../../rusoto/dynamodb/struct.AttributeValue.html' title='rusoto::dynamodb::AttributeValue'>AttributeValue</a></code></h4>
-</div><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='struct' href='../../rusoto/dynamodb/struct.AttributeValue.html' title='rusoto::dynamodb::AttributeValue'>AttributeValue</a></code></h3><div class='impl-items'><h4 id='method.fmt' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#method.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
-</div></section>
+    pub b: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/dynamodb/type.BinaryAttributeValue.html' title='rusoto::dynamodb::BinaryAttributeValue'>BinaryAttributeValue</a>&gt;,
+    pub b_o_o_l: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/dynamodb/type.BooleanAttributeValue.html' title='rusoto::dynamodb::BooleanAttributeValue'>BooleanAttributeValue</a>&gt;,
+    pub b_s: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/dynamodb/type.BinarySetAttributeValue.html' title='rusoto::dynamodb::BinarySetAttributeValue'>BinarySetAttributeValue</a>&gt;,
+    pub l: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/dynamodb/type.ListAttributeValue.html' title='rusoto::dynamodb::ListAttributeValue'>ListAttributeValue</a>&gt;,
+    pub m: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/dynamodb/type.MapAttributeValue.html' title='rusoto::dynamodb::MapAttributeValue'>MapAttributeValue</a>&gt;,
+    pub n: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/dynamodb/type.NumberAttributeValue.html' title='rusoto::dynamodb::NumberAttributeValue'>NumberAttributeValue</a>&gt;,
+    pub n_s: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/dynamodb/type.NumberSetAttributeValue.html' title='rusoto::dynamodb::NumberSetAttributeValue'>NumberSetAttributeValue</a>&gt;,
+    pub n_u_l_l: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/dynamodb/type.NullAttributeValue.html' title='rusoto::dynamodb::NullAttributeValue'>NullAttributeValue</a>&gt;,
+    pub s: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/dynamodb/type.StringAttributeValue.html' title='rusoto::dynamodb::StringAttributeValue'>StringAttributeValue</a>&gt;,
+    pub s_s: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/dynamodb/type.StringSetAttributeValue.html' title='rusoto::dynamodb::StringSetAttributeValue'>StringSetAttributeValue</a>&gt;,
+}</pre><div class='docblock'><p>Represents the data for an attribute. You can set one, and only one, of the elements.</p> <p>Each attribute in an item is a name-value pair. An attribute can be single-valued or multi-valued set. For example, a book item can have title and authors attributes. Each book has one title but can have many authors. The multi-valued attribute is a set; duplicate values are not allowed. </p>
+</div><h2 class='fields'>Fields</h2><span id='structfield.b'><code>b: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/dynamodb/type.BinaryAttributeValue.html' title='rusoto::dynamodb::BinaryAttributeValue'>BinaryAttributeValue</a>&gt;</code></span>
+                           <span class='stab '></span><div class='docblock'><p>A Binary data type.</p>
+</div><span id='structfield.b_o_o_l'><code>b_o_o_l: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/dynamodb/type.BooleanAttributeValue.html' title='rusoto::dynamodb::BooleanAttributeValue'>BooleanAttributeValue</a>&gt;</code></span>
+                           <span class='stab '></span><div class='docblock'><p>A Boolean data type.</p>
+</div><span id='structfield.b_s'><code>b_s: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/dynamodb/type.BinarySetAttributeValue.html' title='rusoto::dynamodb::BinarySetAttributeValue'>BinarySetAttributeValue</a>&gt;</code></span>
+                           <span class='stab '></span><div class='docblock'><p>A Binary Set data type.</p>
+</div><span id='structfield.l'><code>l: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/dynamodb/type.ListAttributeValue.html' title='rusoto::dynamodb::ListAttributeValue'>ListAttributeValue</a>&gt;</code></span>
+                           <span class='stab '></span><div class='docblock'><p>A List of attribute values.</p>
+</div><span id='structfield.m'><code>m: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/dynamodb/type.MapAttributeValue.html' title='rusoto::dynamodb::MapAttributeValue'>MapAttributeValue</a>&gt;</code></span>
+                           <span class='stab '></span><div class='docblock'><p>A Map of attribute values.</p>
+</div><span id='structfield.n'><code>n: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/dynamodb/type.NumberAttributeValue.html' title='rusoto::dynamodb::NumberAttributeValue'>NumberAttributeValue</a>&gt;</code></span>
+                           <span class='stab '></span><div class='docblock'><p>A Number data type.</p>
+</div><span id='structfield.n_s'><code>n_s: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/dynamodb/type.NumberSetAttributeValue.html' title='rusoto::dynamodb::NumberSetAttributeValue'>NumberSetAttributeValue</a>&gt;</code></span>
+                           <span class='stab '></span><div class='docblock'><p>A Number Set data type.</p>
+</div><span id='structfield.n_u_l_l'><code>n_u_l_l: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/dynamodb/type.NullAttributeValue.html' title='rusoto::dynamodb::NullAttributeValue'>NullAttributeValue</a>&gt;</code></span>
+                           <span class='stab '></span><div class='docblock'><p>A Null data type.</p>
+</div><span id='structfield.s'><code>s: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/dynamodb/type.StringAttributeValue.html' title='rusoto::dynamodb::StringAttributeValue'>StringAttributeValue</a>&gt;</code></span>
+                           <span class='stab '></span><div class='docblock'><p>A String data type.</p>
+</div><span id='structfield.s_s'><code>s_s: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/dynamodb/type.StringSetAttributeValue.html' title='rusoto::dynamodb::StringSetAttributeValue'>StringSetAttributeValue</a>&gt;</code></span>
+                           <span class='stab '></span><div class='docblock'><p>A String Set data type.</p>
+</div><h2 id='implementations'>Trait Implementations</h2><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='struct' href='../../rusoto/dynamodb/struct.AttributeValue.html' title='rusoto::dynamodb::AttributeValue'>AttributeValue</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-1002' class='srclink' href='../../src/rusoto/home/adimarco/code/rusoto/target/debug/build/rusoto-9b092785f15fdaf7/out/dynamodb.rs.html#275' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
+<div class='docblock'><p>Formats the value using the given formatter.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html' title='core::default::Default'>Default</a> for <a class='struct' href='../../rusoto/dynamodb/struct.AttributeValue.html' title='rusoto::dynamodb::AttributeValue'>AttributeValue</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-1017' class='srclink' href='../../src/rusoto/home/adimarco/code/rusoto/target/debug/build/rusoto-9b092785f15fdaf7/out/dynamodb.rs.html#275' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.default' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html#tymethod.default' class='fnname'>default</a>() -&gt; <a class='struct' href='../../rusoto/dynamodb/struct.AttributeValue.html' title='rusoto::dynamodb::AttributeValue'>AttributeValue</a></code></h4>
+<div class='docblock'><p>Returns the &quot;default value&quot; for a type. <a href="https://doc.rust-lang.org/nightly/core/default/trait.Default.html#tymethod.default">Read more</a></p>
+</div></div></section>
     <section id='search' class="content hidden"></section>
 
     <section class="footer"></section>
@@ -112,6 +109,8 @@ multi-valued attribute is a set; duplicate values are not allowed.</p>
                     <dd>Move down in search results</dd>
                     <dt>&#9166;</dt>
                     <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
                 </dl>
             </div>
 

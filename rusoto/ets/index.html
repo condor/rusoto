@@ -1,0 +1,1293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `ets` mod in crate `rusoto`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, ets">
+
+    <title>rusoto::ets - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='../index.html'>rusoto</a></p><script>window.sidebarCurrent = {name: 'ets', ty: 'mod', relpath: '../'};</script><script defer src="../sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content mod">
+<h1 class='fqn'><span class='in-band'>Module <a href='../index.html'>rusoto</a>::<wbr><a class='mod' href=''>ets</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-63397' class='srclink' href='../../src/rusoto/src/ets.rs.html#1-3' title='goto source code'>[src]</a></span></h1>
+<div class='docblock'><p>Amazon Elastic Transcoder</p>
+</div><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.AccessDeniedException.html'
+                                  title='rusoto::ets::AccessDeniedException'>AccessDeniedException</a></td>
+                           <td class='docblock short'>
+                                <p> General authentication failure. The request was not signed correctly. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.Artwork.html'
+                                  title='rusoto::ets::Artwork'>Artwork</a></td>
+                           <td class='docblock short'>
+                                <p>The file to be used as album art. There can be multiple artworks associated with an audio file, to a maximum of 20.</p> <p>To remove artwork or leave the artwork empty, you can either set <code>Artwork</code> to null, or set the <code>Merge Policy</code> to "Replace" and use an empty <code>Artwork</code> array.</p> <p>To pass through existing artwork unchanged, set the <code>Merge Policy</code> to "Prepend", "Append", or "Fallback", and use an empty <code>Artwork</code> array.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.AudioCodecOptions.html'
+                                  title='rusoto::ets::AudioCodecOptions'>AudioCodecOptions</a></td>
+                           <td class='docblock short'>
+                                <p>Options associated with your audio codec.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.AudioParameters.html'
+                                  title='rusoto::ets::AudioParameters'>AudioParameters</a></td>
+                           <td class='docblock short'>
+                                <p>Parameters required for transcoding audio.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CancelJobRequest.html'
+                                  title='rusoto::ets::CancelJobRequest'>CancelJobRequest</a></td>
+                           <td class='docblock short'>
+                                <p>The <code>CancelJobRequest</code> structure.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CancelJobResponse.html'
+                                  title='rusoto::ets::CancelJobResponse'>CancelJobResponse</a></td>
+                           <td class='docblock short'>
+                                <p>The response body contains a JSON object. If the job is successfully canceled, the value of <code>Success</code> is <code>true</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CaptionFormat.html'
+                                  title='rusoto::ets::CaptionFormat'>CaptionFormat</a></td>
+                           <td class='docblock short'>
+                                <p>The file format of the output captions. If you leave this value blank, Elastic Transcoder returns an error.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CaptionSource.html'
+                                  title='rusoto::ets::CaptionSource'>CaptionSource</a></td>
+                           <td class='docblock short'>
+                                <p>A source file for the input sidecar captions used during the transcoding process.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.Captions.html'
+                                  title='rusoto::ets::Captions'>Captions</a></td>
+                           <td class='docblock short'>
+                                <p>The captions to be created, if any.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.Clip.html'
+                                  title='rusoto::ets::Clip'>Clip</a></td>
+                           <td class='docblock short'>
+                                <p>Settings for one clip in a composition. All jobs in a playlist must have the same clip settings.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CreateJobOutput.html'
+                                  title='rusoto::ets::CreateJobOutput'>CreateJobOutput</a></td>
+                           <td class='docblock short'>
+                                <p>The <code>CreateJobOutput</code> structure.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CreateJobPlaylist.html'
+                                  title='rusoto::ets::CreateJobPlaylist'>CreateJobPlaylist</a></td>
+                           <td class='docblock short'>
+                                <p>Information about the master playlist.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CreateJobRequest.html'
+                                  title='rusoto::ets::CreateJobRequest'>CreateJobRequest</a></td>
+                           <td class='docblock short'>
+                                <p>The <code>CreateJobRequest</code> structure.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CreateJobResponse.html'
+                                  title='rusoto::ets::CreateJobResponse'>CreateJobResponse</a></td>
+                           <td class='docblock short'>
+                                <p>The CreateJobResponse structure.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CreatePipelineRequest.html'
+                                  title='rusoto::ets::CreatePipelineRequest'>CreatePipelineRequest</a></td>
+                           <td class='docblock short'>
+                                <p>The <code>CreatePipelineRequest</code> structure.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CreatePipelineResponse.html'
+                                  title='rusoto::ets::CreatePipelineResponse'>CreatePipelineResponse</a></td>
+                           <td class='docblock short'>
+                                <p>When you create a pipeline, Elastic Transcoder returns the values that you specified in the request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CreatePresetRequest.html'
+                                  title='rusoto::ets::CreatePresetRequest'>CreatePresetRequest</a></td>
+                           <td class='docblock short'>
+                                <p>The <code>CreatePresetRequest</code> structure.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CreatePresetResponse.html'
+                                  title='rusoto::ets::CreatePresetResponse'>CreatePresetResponse</a></td>
+                           <td class='docblock short'>
+                                <p>The <code>CreatePresetResponse</code> structure.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.DeletePipelineRequest.html'
+                                  title='rusoto::ets::DeletePipelineRequest'>DeletePipelineRequest</a></td>
+                           <td class='docblock short'>
+                                <p>The <code>DeletePipelineRequest</code> structure.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.DeletePipelineResponse.html'
+                                  title='rusoto::ets::DeletePipelineResponse'>DeletePipelineResponse</a></td>
+                           <td class='docblock short'>
+                                <p>The <code>DeletePipelineResponse</code> structure.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.DeletePresetRequest.html'
+                                  title='rusoto::ets::DeletePresetRequest'>DeletePresetRequest</a></td>
+                           <td class='docblock short'>
+                                <p>The <code>DeletePresetRequest</code> structure.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.DeletePresetResponse.html'
+                                  title='rusoto::ets::DeletePresetResponse'>DeletePresetResponse</a></td>
+                           <td class='docblock short'>
+                                <p>The <code>DeletePresetResponse</code> structure.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.DetectedProperties.html'
+                                  title='rusoto::ets::DetectedProperties'>DetectedProperties</a></td>
+                           <td class='docblock short'>
+                                <p>The detected properties of the input file. Elastic Transcoder identifies these values from the input file.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.Encryption.html'
+                                  title='rusoto::ets::Encryption'>Encryption</a></td>
+                           <td class='docblock short'>
+                                <p>The encryption settings, if any, that are used for decrypting your input files or encrypting your output files. If your input file is encrypted, you must specify the mode that Elastic Transcoder will use to decrypt your file, otherwise you must specify the mode you want Elastic Transcoder to use to encrypt your output files.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.EtsClient.html'
+                                  title='rusoto::ets::EtsClient'>EtsClient</a></td>
+                           <td class='docblock short'>
+                                <p>A client for the Amazon Elastic Transcoder API.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.HlsContentProtection.html'
+                                  title='rusoto::ets::HlsContentProtection'>HlsContentProtection</a></td>
+                           <td class='docblock short'>
+                                <p>The HLS content protection settings, if any, that you want Elastic Transcoder to apply to your output files.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.IncompatibleVersionException.html'
+                                  title='rusoto::ets::IncompatibleVersionException'>IncompatibleVersionException</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.InternalServiceException.html'
+                                  title='rusoto::ets::InternalServiceException'>InternalServiceException</a></td>
+                           <td class='docblock short'>
+                                <p>Elastic Transcoder encountered an unexpected exception while trying to fulfill the request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.Job.html'
+                                  title='rusoto::ets::Job'>Job</a></td>
+                           <td class='docblock short'>
+                                <p>A section of the response body that provides information about the job that is created.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.JobAlbumArt.html'
+                                  title='rusoto::ets::JobAlbumArt'>JobAlbumArt</a></td>
+                           <td class='docblock short'>
+                                <p>The .jpg or .png file associated with an audio file.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.JobInput.html'
+                                  title='rusoto::ets::JobInput'>JobInput</a></td>
+                           <td class='docblock short'>
+                                <p>Information about the file that you're transcoding.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.JobOutput.html'
+                                  title='rusoto::ets::JobOutput'>JobOutput</a></td>
+                           <td class='docblock short'>
+                                <p><important>Outputs recommended instead.</important>If you specified one output for a job, information about that output. If you specified multiple outputs for a job, the <code>Output</code> object lists information about the first output. This duplicates the information that is listed for the first output in the <code>Outputs</code> object.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.JobWatermark.html'
+                                  title='rusoto::ets::JobWatermark'>JobWatermark</a></td>
+                           <td class='docblock short'>
+                                <p>Watermarks can be in .png or .jpg format. If you want to display a watermark that is not rectangular, use the .png format, which supports transparency.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.LimitExceededException.html'
+                                  title='rusoto::ets::LimitExceededException'>LimitExceededException</a></td>
+                           <td class='docblock short'>
+                                <p>Too many operations for a given AWS account. For example, the number of pipelines exceeds the maximum allowed.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ListJobsByPipelineRequest.html'
+                                  title='rusoto::ets::ListJobsByPipelineRequest'>ListJobsByPipelineRequest</a></td>
+                           <td class='docblock short'>
+                                <p>The <code>ListJobsByPipelineRequest</code> structure.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ListJobsByPipelineResponse.html'
+                                  title='rusoto::ets::ListJobsByPipelineResponse'>ListJobsByPipelineResponse</a></td>
+                           <td class='docblock short'>
+                                <p>The <code>ListJobsByPipelineResponse</code> structure.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ListJobsByStatusRequest.html'
+                                  title='rusoto::ets::ListJobsByStatusRequest'>ListJobsByStatusRequest</a></td>
+                           <td class='docblock short'>
+                                <p>The <code>ListJobsByStatusRequest</code> structure.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ListJobsByStatusResponse.html'
+                                  title='rusoto::ets::ListJobsByStatusResponse'>ListJobsByStatusResponse</a></td>
+                           <td class='docblock short'>
+                                <p> The <code>ListJobsByStatusResponse</code> structure. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ListPipelinesRequest.html'
+                                  title='rusoto::ets::ListPipelinesRequest'>ListPipelinesRequest</a></td>
+                           <td class='docblock short'>
+                                <p>The <code>ListPipelineRequest</code> structure.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ListPipelinesResponse.html'
+                                  title='rusoto::ets::ListPipelinesResponse'>ListPipelinesResponse</a></td>
+                           <td class='docblock short'>
+                                <p>A list of the pipelines associated with the current AWS account.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ListPresetsRequest.html'
+                                  title='rusoto::ets::ListPresetsRequest'>ListPresetsRequest</a></td>
+                           <td class='docblock short'>
+                                <p>The <code>ListPresetsRequest</code> structure.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ListPresetsResponse.html'
+                                  title='rusoto::ets::ListPresetsResponse'>ListPresetsResponse</a></td>
+                           <td class='docblock short'>
+                                <p>The <code>ListPresetsResponse</code> structure.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.Notifications.html'
+                                  title='rusoto::ets::Notifications'>Notifications</a></td>
+                           <td class='docblock short'>
+                                <p><p>The Amazon Simple Notification Service (Amazon SNS) topic or topics to notify in order to report job status.</p> <important>To receive notifications, you must also subscribe to the new topic in the Amazon SNS console.</important></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.Permission.html'
+                                  title='rusoto::ets::Permission'>Permission</a></td>
+                           <td class='docblock short'>
+                                <p>The <code>Permission</code> structure.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.Pipeline.html'
+                                  title='rusoto::ets::Pipeline'>Pipeline</a></td>
+                           <td class='docblock short'>
+                                <p>The pipeline (queue) that is used to manage jobs.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.PipelineOutputConfig.html'
+                                  title='rusoto::ets::PipelineOutputConfig'>PipelineOutputConfig</a></td>
+                           <td class='docblock short'>
+                                <p>The <code>PipelineOutputConfig</code> structure.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.PlayReadyDrm.html'
+                                  title='rusoto::ets::PlayReadyDrm'>PlayReadyDrm</a></td>
+                           <td class='docblock short'>
+                                <p>The PlayReady DRM settings, if any, that you want Elastic Transcoder to apply to the output files associated with this playlist.</p> <p>PlayReady DRM encrypts your media files using <code>AES-CTR</code> encryption.</p> <p>If you use DRM for an <code>HLSv3</code> playlist, your outputs must have a master playlist.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.Playlist.html'
+                                  title='rusoto::ets::Playlist'>Playlist</a></td>
+                           <td class='docblock short'>
+                                <p> Use Only for Fragmented MP4 or MPEG-TS Outputs. If you specify a preset for which the value of Container is <code>fmp4</code> (Fragmented MP4) or <code>ts</code> (MPEG-TS), Playlists contains information about the master playlists that you want Elastic Transcoder to create. We recommend that you create only one master playlist per output format. The maximum number of master playlists in a job is 30. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.Preset.html'
+                                  title='rusoto::ets::Preset'>Preset</a></td>
+                           <td class='docblock short'>
+                                <p>Presets are templates that contain most of the settings for transcoding media files from one format to another. Elastic Transcoder includes some default presets for common formats, for example, several iPod and iPhone versions. You can also create your own presets for formats that aren't included among the default presets. You specify which preset you want to use when you create a job.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.PresetWatermark.html'
+                                  title='rusoto::ets::PresetWatermark'>PresetWatermark</a></td>
+                           <td class='docblock short'>
+                                <p>Settings for the size, location, and opacity of graphics that you want Elastic Transcoder to overlay over videos that are transcoded using this preset. You can specify settings for up to four watermarks. Watermarks appear in the specified size and location, and with the specified opacity for the duration of the transcoded video.</p> <p>Watermarks can be in .png or .jpg format. If you want to display a watermark that is not rectangular, use the .png format, which supports transparency.</p> <p>When you create a job that uses this preset, you specify the .png or .jpg graphics that you want Elastic Transcoder to include in the transcoded videos. You can specify fewer graphics in the job than you specify watermark settings in the preset, which allows you to use the same preset for up to four watermarks that have different dimensions.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ReadJobRequest.html'
+                                  title='rusoto::ets::ReadJobRequest'>ReadJobRequest</a></td>
+                           <td class='docblock short'>
+                                <p>The <code>ReadJobRequest</code> structure.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ReadJobResponse.html'
+                                  title='rusoto::ets::ReadJobResponse'>ReadJobResponse</a></td>
+                           <td class='docblock short'>
+                                <p>The <code>ReadJobResponse</code> structure.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ReadPipelineRequest.html'
+                                  title='rusoto::ets::ReadPipelineRequest'>ReadPipelineRequest</a></td>
+                           <td class='docblock short'>
+                                <p>The <code>ReadPipelineRequest</code> structure.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ReadPipelineResponse.html'
+                                  title='rusoto::ets::ReadPipelineResponse'>ReadPipelineResponse</a></td>
+                           <td class='docblock short'>
+                                <p>The <code>ReadPipelineResponse</code> structure.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ReadPresetRequest.html'
+                                  title='rusoto::ets::ReadPresetRequest'>ReadPresetRequest</a></td>
+                           <td class='docblock short'>
+                                <p>The <code>ReadPresetRequest</code> structure.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ReadPresetResponse.html'
+                                  title='rusoto::ets::ReadPresetResponse'>ReadPresetResponse</a></td>
+                           <td class='docblock short'>
+                                <p>The <code>ReadPresetResponse</code> structure.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ResourceInUseException.html'
+                                  title='rusoto::ets::ResourceInUseException'>ResourceInUseException</a></td>
+                           <td class='docblock short'>
+                                <p> The resource you are attempting to change is in use. For example, you are attempting to delete a pipeline that is currently in use. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ResourceNotFoundException.html'
+                                  title='rusoto::ets::ResourceNotFoundException'>ResourceNotFoundException</a></td>
+                           <td class='docblock short'>
+                                <p> The requested resource does not exist or is not available. For example, the pipeline to which you're trying to add a job doesn't exist or is still being created. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.TestRoleRequest.html'
+                                  title='rusoto::ets::TestRoleRequest'>TestRoleRequest</a></td>
+                           <td class='docblock short'>
+                                <p> The <code>TestRoleRequest</code> structure. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.TestRoleResponse.html'
+                                  title='rusoto::ets::TestRoleResponse'>TestRoleResponse</a></td>
+                           <td class='docblock short'>
+                                <p>The <code>TestRoleResponse</code> structure.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.Thumbnails.html'
+                                  title='rusoto::ets::Thumbnails'>Thumbnails</a></td>
+                           <td class='docblock short'>
+                                <p>Thumbnails for videos.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.TimeSpan.html'
+                                  title='rusoto::ets::TimeSpan'>TimeSpan</a></td>
+                           <td class='docblock short'>
+                                <p>Settings that determine when a clip begins and how long it lasts.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.Timing.html'
+                                  title='rusoto::ets::Timing'>Timing</a></td>
+                           <td class='docblock short'>
+                                <p>Details about the timing of a job.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.UpdatePipelineNotificationsRequest.html'
+                                  title='rusoto::ets::UpdatePipelineNotificationsRequest'>UpdatePipelineNotificationsRequest</a></td>
+                           <td class='docblock short'>
+                                <p>The <code>UpdatePipelineNotificationsRequest</code> structure.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.UpdatePipelineNotificationsResponse.html'
+                                  title='rusoto::ets::UpdatePipelineNotificationsResponse'>UpdatePipelineNotificationsResponse</a></td>
+                           <td class='docblock short'>
+                                <p>The <code>UpdatePipelineNotificationsResponse</code> structure.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.UpdatePipelineRequest.html'
+                                  title='rusoto::ets::UpdatePipelineRequest'>UpdatePipelineRequest</a></td>
+                           <td class='docblock short'>
+                                <p>The <code>UpdatePipelineRequest</code> structure.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.UpdatePipelineResponse.html'
+                                  title='rusoto::ets::UpdatePipelineResponse'>UpdatePipelineResponse</a></td>
+                           <td class='docblock short'>
+                                <p>When you update a pipeline, Elastic Transcoder returns the values that you specified in the request. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.UpdatePipelineStatusRequest.html'
+                                  title='rusoto::ets::UpdatePipelineStatusRequest'>UpdatePipelineStatusRequest</a></td>
+                           <td class='docblock short'>
+                                <p>The <code>UpdatePipelineStatusRequest</code> structure.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.UpdatePipelineStatusResponse.html'
+                                  title='rusoto::ets::UpdatePipelineStatusResponse'>UpdatePipelineStatusResponse</a></td>
+                           <td class='docblock short'>
+                                <p>When you update status for a pipeline, Elastic Transcoder returns the values that you specified in the request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ValidationException.html'
+                                  title='rusoto::ets::ValidationException'>ValidationException</a></td>
+                           <td class='docblock short'>
+                                <p>One or more required parameter values were not provided in the request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.VideoParameters.html'
+                                  title='rusoto::ets::VideoParameters'>VideoParameters</a></td>
+                           <td class='docblock short'>
+                                <p>The <code>VideoParameters</code> structure.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.Warning.html'
+                                  title='rusoto::ets::Warning'>Warning</a></td>
+                           <td class='docblock short'>
+                                <p>Elastic Transcoder returns a warning if the resources used by your pipeline are not in the same region as the pipeline.</p> <p>Using resources in the same region, such as your Amazon S3 buckets, Amazon SNS notification topics, and AWS KMS key, reduces processing time and prevents cross-regional charges.</p>
+                           </td>
+                       </tr></table><h2 id='types' class='section-header'><a href="#types">Type Definitions</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.AccessControl.html'
+                                  title='rusoto::ets::AccessControl'>AccessControl</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.AccessControls.html'
+                                  title='rusoto::ets::AccessControls'>AccessControls</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.Artworks.html'
+                                  title='rusoto::ets::Artworks'>Artworks</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.Ascending.html'
+                                  title='rusoto::ets::Ascending'>Ascending</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.AspectRatio.html'
+                                  title='rusoto::ets::AspectRatio'>AspectRatio</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.AudioBitDepth.html'
+                                  title='rusoto::ets::AudioBitDepth'>AudioBitDepth</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.AudioBitOrder.html'
+                                  title='rusoto::ets::AudioBitOrder'>AudioBitOrder</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.AudioBitRate.html'
+                                  title='rusoto::ets::AudioBitRate'>AudioBitRate</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.AudioChannels.html'
+                                  title='rusoto::ets::AudioChannels'>AudioChannels</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.AudioCodec.html'
+                                  title='rusoto::ets::AudioCodec'>AudioCodec</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.AudioCodecProfile.html'
+                                  title='rusoto::ets::AudioCodecProfile'>AudioCodecProfile</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.AudioPackingMode.html'
+                                  title='rusoto::ets::AudioPackingMode'>AudioPackingMode</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.AudioSampleRate.html'
+                                  title='rusoto::ets::AudioSampleRate'>AudioSampleRate</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.AudioSigned.html'
+                                  title='rusoto::ets::AudioSigned'>AudioSigned</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.Base64EncodedString.html'
+                                  title='rusoto::ets::Base64EncodedString'>Base64EncodedString</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.BucketName.html'
+                                  title='rusoto::ets::BucketName'>BucketName</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.CaptionFormatFormat.html'
+                                  title='rusoto::ets::CaptionFormatFormat'>CaptionFormatFormat</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.CaptionFormatPattern.html'
+                                  title='rusoto::ets::CaptionFormatPattern'>CaptionFormatPattern</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.CaptionFormats.html'
+                                  title='rusoto::ets::CaptionFormats'>CaptionFormats</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.CaptionMergePolicy.html'
+                                  title='rusoto::ets::CaptionMergePolicy'>CaptionMergePolicy</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.CaptionSources.html'
+                                  title='rusoto::ets::CaptionSources'>CaptionSources</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.CodecOption.html'
+                                  title='rusoto::ets::CodecOption'>CodecOption</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.CodecOptions.html'
+                                  title='rusoto::ets::CodecOptions'>CodecOptions</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.Composition.html'
+                                  title='rusoto::ets::Composition'>Composition</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.CreateJobOutputs.html'
+                                  title='rusoto::ets::CreateJobOutputs'>CreateJobOutputs</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.CreateJobPlaylists.html'
+                                  title='rusoto::ets::CreateJobPlaylists'>CreateJobPlaylists</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.Description.html'
+                                  title='rusoto::ets::Description'>Description</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.Digits.html'
+                                  title='rusoto::ets::Digits'>Digits</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.DigitsOrAuto.html'
+                                  title='rusoto::ets::DigitsOrAuto'>DigitsOrAuto</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.EncryptionMode.html'
+                                  title='rusoto::ets::EncryptionMode'>EncryptionMode</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.ExceptionMessages.html'
+                                  title='rusoto::ets::ExceptionMessages'>ExceptionMessages</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.Filename.html'
+                                  title='rusoto::ets::Filename'>Filename</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.FixedGOP.html'
+                                  title='rusoto::ets::FixedGOP'>FixedGOP</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.FloatString.html'
+                                  title='rusoto::ets::FloatString'>FloatString</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.FrameRate.html'
+                                  title='rusoto::ets::FrameRate'>FrameRate</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.Grantee.html'
+                                  title='rusoto::ets::Grantee'>Grantee</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.GranteeType.html'
+                                  title='rusoto::ets::GranteeType'>GranteeType</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.HlsContentProtectionMethod.html'
+                                  title='rusoto::ets::HlsContentProtectionMethod'>HlsContentProtectionMethod</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.HorizontalAlign.html'
+                                  title='rusoto::ets::HorizontalAlign'>HorizontalAlign</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.Id.html'
+                                  title='rusoto::ets::Id'>Id</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.Interlaced.html'
+                                  title='rusoto::ets::Interlaced'>Interlaced</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.JobContainer.html'
+                                  title='rusoto::ets::JobContainer'>JobContainer</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.JobOutputs.html'
+                                  title='rusoto::ets::JobOutputs'>JobOutputs</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.JobStatus.html'
+                                  title='rusoto::ets::JobStatus'>JobStatus</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.JobWatermarks.html'
+                                  title='rusoto::ets::JobWatermarks'>JobWatermarks</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.Jobs.html'
+                                  title='rusoto::ets::Jobs'>Jobs</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.JpgOrPng.html'
+                                  title='rusoto::ets::JpgOrPng'>JpgOrPng</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.Key.html'
+                                  title='rusoto::ets::Key'>Key</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.KeyArn.html'
+                                  title='rusoto::ets::KeyArn'>KeyArn</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.KeyIdGuid.html'
+                                  title='rusoto::ets::KeyIdGuid'>KeyIdGuid</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.KeyStoragePolicy.html'
+                                  title='rusoto::ets::KeyStoragePolicy'>KeyStoragePolicy</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.KeyframesMaxDist.html'
+                                  title='rusoto::ets::KeyframesMaxDist'>KeyframesMaxDist</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.MaxFrameRate.html'
+                                  title='rusoto::ets::MaxFrameRate'>MaxFrameRate</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.MergePolicy.html'
+                                  title='rusoto::ets::MergePolicy'>MergePolicy</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.Name.html'
+                                  title='rusoto::ets::Name'>Name</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.NonEmptyBase64EncodedString.html'
+                                  title='rusoto::ets::NonEmptyBase64EncodedString'>NonEmptyBase64EncodedString</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.NullableInteger.html'
+                                  title='rusoto::ets::NullableInteger'>NullableInteger</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.NullableLong.html'
+                                  title='rusoto::ets::NullableLong'>NullableLong</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.OneTo512String.html'
+                                  title='rusoto::ets::OneTo512String'>OneTo512String</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.Opacity.html'
+                                  title='rusoto::ets::Opacity'>Opacity</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.OutputKeys.html'
+                                  title='rusoto::ets::OutputKeys'>OutputKeys</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.PaddingPolicy.html'
+                                  title='rusoto::ets::PaddingPolicy'>PaddingPolicy</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.Permissions.html'
+                                  title='rusoto::ets::Permissions'>Permissions</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.PipelineStatus.html'
+                                  title='rusoto::ets::PipelineStatus'>PipelineStatus</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.Pipelines.html'
+                                  title='rusoto::ets::Pipelines'>Pipelines</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.PixelsOrPercent.html'
+                                  title='rusoto::ets::PixelsOrPercent'>PixelsOrPercent</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.PlayReadyDrmFormatString.html'
+                                  title='rusoto::ets::PlayReadyDrmFormatString'>PlayReadyDrmFormatString</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.PlaylistFormat.html'
+                                  title='rusoto::ets::PlaylistFormat'>PlaylistFormat</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.Playlists.html'
+                                  title='rusoto::ets::Playlists'>Playlists</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.PresetContainer.html'
+                                  title='rusoto::ets::PresetContainer'>PresetContainer</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.PresetType.html'
+                                  title='rusoto::ets::PresetType'>PresetType</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.PresetWatermarkId.html'
+                                  title='rusoto::ets::PresetWatermarkId'>PresetWatermarkId</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.PresetWatermarks.html'
+                                  title='rusoto::ets::PresetWatermarks'>PresetWatermarks</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.Presets.html'
+                                  title='rusoto::ets::Presets'>Presets</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.Resolution.html'
+                                  title='rusoto::ets::Resolution'>Resolution</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.Role.html'
+                                  title='rusoto::ets::Role'>Role</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.Rotate.html'
+                                  title='rusoto::ets::Rotate'>Rotate</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.SizingPolicy.html'
+                                  title='rusoto::ets::SizingPolicy'>SizingPolicy</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.SnsTopic.html'
+                                  title='rusoto::ets::SnsTopic'>SnsTopic</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.SnsTopics.html'
+                                  title='rusoto::ets::SnsTopics'>SnsTopics</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.StorageClass.html'
+                                  title='rusoto::ets::StorageClass'>StorageClass</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.Success.html'
+                                  title='rusoto::ets::Success'>Success</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.Target.html'
+                                  title='rusoto::ets::Target'>Target</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.ThumbnailPattern.html'
+                                  title='rusoto::ets::ThumbnailPattern'>ThumbnailPattern</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.ThumbnailResolution.html'
+                                  title='rusoto::ets::ThumbnailResolution'>ThumbnailResolution</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.Time.html'
+                                  title='rusoto::ets::Time'>Time</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.TimeOffset.html'
+                                  title='rusoto::ets::TimeOffset'>TimeOffset</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.UserMetadata.html'
+                                  title='rusoto::ets::UserMetadata'>UserMetadata</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.VerticalAlign.html'
+                                  title='rusoto::ets::VerticalAlign'>VerticalAlign</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.VideoBitRate.html'
+                                  title='rusoto::ets::VideoBitRate'>VideoBitRate</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.VideoCodec.html'
+                                  title='rusoto::ets::VideoCodec'>VideoCodec</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.Warnings.html'
+                                  title='rusoto::ets::Warnings'>Warnings</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.WatermarkKey.html'
+                                  title='rusoto::ets::WatermarkKey'>WatermarkKey</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.WatermarkSizingPolicy.html'
+                                  title='rusoto::ets::WatermarkSizingPolicy'>WatermarkSizingPolicy</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.ZeroTo255String.html'
+                                  title='rusoto::ets::ZeroTo255String'>ZeroTo255String</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.ZeroTo512String.html'
+                                  title='rusoto::ets::ZeroTo512String'>ZeroTo512String</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr></table></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "rusoto";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

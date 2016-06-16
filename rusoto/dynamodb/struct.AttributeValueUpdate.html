@@ -11,6 +11,7 @@
 
     <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
     <link rel="stylesheet" type="text/css" href="../../main.css">
+    
 
     
     
@@ -43,61 +44,24 @@
 
     <section id='main' class="content struct">
 <h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>rusoto</a>::<wbr><a href='index.html'>dynamodb</a>::<wbr><a class='struct' href=''>AttributeValueUpdate</a></span><span class='out-of-band'><span id='render-detail'>
-            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
-                [<span class='inner'>&#x2212;</span>]
-            </a>
-        </span><a id='src-5876' class='srclink' href='../../src/rusoto///Users/jimmy/Code/rusoto/target/debug/build/rusoto-27b53b229e74877b/out/dynamodb.rs.html#10931-10966' title='goto source code'>[src]</a></span></h1>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-1285' class='srclink' href='../../src/rusoto/home/adimarco/code/rusoto/target/debug/build/rusoto-9b092785f15fdaf7/out/dynamodb.rs.html#919-926' title='goto source code'>[src]</a></span></h1>
 <pre class='rust struct'>pub struct AttributeValueUpdate {
-    pub Action: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/dynamodb/type.AttributeAction.html' title='rusoto::dynamodb::AttributeAction'>AttributeAction</a>&gt;,
-    pub Value: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../rusoto/dynamodb/struct.AttributeValue.html' title='rusoto::dynamodb::AttributeValue'>AttributeValue</a>&gt;,
-}</pre><div class='docblock'><p>For the <em>UpdateItem</em> operation, represents the attributes to be modified, the
-action to perform on each, and the new value for each.
-You cannot use <em>UpdateItem</em> to update any primary key attributes. Instead, you
-will need to delete the item, and then use <em>PutItem</em> to create a new item with
-new attributes.
-Attribute values cannot be null; string and binary type attributes must have
-lengths greater than zero; and set type attributes must not be empty. Requests
-with empty values will be rejected with a <em>ValidationException</em> exception.</p>
-</div><h2 class='fields'>Fields</h2>
-<table><tr class='stab '>
-                                  <td id='structfield.Action'><code>Action</code></td><td><div class='docblock'><p>Specifies how to perform the update. Valid values are <code>PUT</code> (default),
-<code>DELETE</code>, and <code>ADD</code>. The behavior depends on whether the specified primary key
-already exists in the table.
-<strong>If an item with the specified <em>Key</em> is found in the table:</strong>
-  * <code>PUT</code> - Adds the specified attribute to the item. If the attribute already exists, it is replaced by the new value. 
-  * <code>DELETE</code> - If no value is specified, the attribute and its value are removed from the item. The data type of the specified value must match the existing value&#39;s data type.
-If a <em>set</em> of values is specified, then those values are subtracted from the
-old set. For example, if the attribute value was the set <code>[a,b,c]</code> and the
-<em>DELETE</em> action specified <code>[a,c]</code>, then the final attribute value would be
-<code>[b]</code>. Specifying an empty set is an error.
-  * <code>ADD</code> - If the attribute does not already exist, then the attribute and its values are added to the item. If the attribute does exist, then the behavior of <code>ADD</code> depends on the data type of the attribute:
-    * If the existing attribute is a number, and if <em>Value</em> is also a number, then the <em>Value</em> is mathematically added to the existing attribute. If <em>Value</em> is a negative number, then it is subtracted from the existing attribute.
-If you use <code>ADD</code> to increment or decrement a number value for an item that
-doesn&#39;t exist before the update, DynamoDB uses 0 as the initial value.
-In addition, if you use <code>ADD</code> to update an existing item, and intend to
-increment or decrement an attribute value which does not yet exist, DynamoDB
-uses <code>0</code> as the initial value. For example, suppose that the item you want to
-update does not yet have an attribute named <em>itemcount</em>, but you decide to
-<code>ADD</code> the number <code>3</code> to this attribute anyway, even though it currently does
-not exist. DynamoDB will create the <em>itemcount</em> attribute, set its initial
-value to <code>0</code>, and finally add <code>3</code> to it. The result will be a new <em>itemcount</em>
-attribute in the item, with a value of <code>3</code>.
-    * If the existing data type is a set, and if the <em>Value</em> is also a set, then the <em>Value</em> is added to the existing set. (This is a <em>set</em> operation, not mathematical addition.) For example, if the attribute value was the set <code>[1,2]</code>, and the <code>ADD</code> action specified <code>[3]</code>, then the final attribute value would be <code>[1,2,3]</code>. An error occurs if an Add action is specified for a set attribute and the attribute type specified does not match the existing set type. 
-Both sets must have the same primitive data type. For example, if the existing
-data type is a set of strings, the <em>Value</em> must also be a set of strings. The
-same holds true for number sets and binary sets.
-This action is only valid for an existing attribute whose data type is number
-or is a set. Do not use <code>ADD</code> for any other data types.
-<strong>If no item with the specified <em>Key</em> is found:</strong>
-  * <code>PUT</code> - DynamoDB creates a new item with the specified primary key, and then adds the attribute. 
-  * <code>DELETE</code> - Nothing happens; there is no attribute to delete.
-  * <code>ADD</code> - DynamoDB creates an item with the supplied primary key and number (or set of numbers) for the attribute value. The only data types allowed are number and number set; no other data types can be specified.</p>
-</div></td></tr><tr class='stab '>
-                                  <td id='structfield.Value'><code>Value</code></td><td></td></tr></table><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><code>impl <a class='trait' href='https://serde-rs.github.io/serde/serde/serde/ser/trait.Serialize.html' title='serde::ser::Serialize'>Serialize</a> for <a class='struct' href='../../rusoto/dynamodb/struct.AttributeValueUpdate.html' title='rusoto::dynamodb::AttributeValueUpdate'>AttributeValueUpdate</a></code></h3><div class='impl-items'><h4 id='method.serialize' class='method'><code>fn <a href='https://serde-rs.github.io/serde/serde/serde/ser/trait.Serialize.html#method.serialize' class='fnname'>serialize</a>&lt;__S&gt;(&amp;self, serializer: &amp;mut __S) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>, __S::Error&gt; <span class='where'>where __S: <a class='trait' href='https://serde-rs.github.io/serde/serde/serde/ser/trait.Serializer.html' title='serde::ser::Serializer'>Serializer</a></span></code></h4>
-</div><h3 class='impl'><code>impl <a class='trait' href='https://serde-rs.github.io/serde/serde/serde/de/trait.Deserialize.html' title='serde::de::Deserialize'>Deserialize</a> for <a class='struct' href='../../rusoto/dynamodb/struct.AttributeValueUpdate.html' title='rusoto::dynamodb::AttributeValueUpdate'>AttributeValueUpdate</a></code></h3><div class='impl-items'><h4 id='method.deserialize' class='method'><code>fn <a href='https://serde-rs.github.io/serde/serde/serde/de/trait.Deserialize.html#method.deserialize' class='fnname'>deserialize</a>&lt;__D&gt;(deserializer: &amp;mut __D) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a class='struct' href='../../rusoto/dynamodb/struct.AttributeValueUpdate.html' title='rusoto::dynamodb::AttributeValueUpdate'>AttributeValueUpdate</a>, __D::Error&gt; <span class='where'>where __D: <a class='trait' href='https://serde-rs.github.io/serde/serde/serde/de/trait.Deserializer.html' title='serde::de::Deserializer'>Deserializer</a></span></code></h4>
-</div><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html' title='core::default::Default'>Default</a> for <a class='struct' href='../../rusoto/dynamodb/struct.AttributeValueUpdate.html' title='rusoto::dynamodb::AttributeValueUpdate'>AttributeValueUpdate</a></code></h3><div class='impl-items'><h4 id='method.default' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html#method.default' class='fnname'>default</a>() -&gt; <a class='struct' href='../../rusoto/dynamodb/struct.AttributeValueUpdate.html' title='rusoto::dynamodb::AttributeValueUpdate'>AttributeValueUpdate</a></code></h4>
-</div><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='struct' href='../../rusoto/dynamodb/struct.AttributeValueUpdate.html' title='rusoto::dynamodb::AttributeValueUpdate'>AttributeValueUpdate</a></code></h3><div class='impl-items'><h4 id='method.fmt' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#method.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
-</div></section>
+    pub action: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/dynamodb/type.AttributeAction.html' title='rusoto::dynamodb::AttributeAction'>AttributeAction</a>&gt;,
+    pub value: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../rusoto/dynamodb/struct.AttributeValue.html' title='rusoto::dynamodb::AttributeValue'>AttributeValue</a>&gt;,
+}</pre><div class='docblock'><p>For the <i>UpdateItem</i> operation, represents the attributes to be modified, the action to perform on each, and the new value for each.</p> <note> <p>You cannot use <i>UpdateItem</i> to update any primary key attributes. Instead, you will need to delete the item, and then use <i>PutItem</i> to create a new item with new attributes.</p> </note> <p>Attribute values cannot be null; string and binary type attributes must have lengths greater than zero; and set type attributes must not be empty. Requests with empty values will be rejected with a <i>ValidationException</i> exception.</p>
+</div><h2 class='fields'>Fields</h2><span id='structfield.action'><code>action: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/dynamodb/type.AttributeAction.html' title='rusoto::dynamodb::AttributeAction'>AttributeAction</a>&gt;</code></span>
+                           <span class='stab '></span><div class='docblock'><p><p>Specifies how to perform the update. Valid values are <code>PUT</code> (default), <code>DELETE</code>, and <code>ADD</code>. The behavior depends on whether the specified primary key already exists in the table.</p> <p> <b>If an item with the specified <i>Key</i> is found in the table:</b> </p> <ul> <li> <p><code>PUT</code> - Adds the specified attribute to the item. If the attribute already exists, it is replaced by the new value. </p> </li> <li> <p><code>DELETE</code> - If no value is specified, the attribute and its value are removed from the item. The data type of the specified value must match the existing value&#39;s data type.</p> <p>If a <i>set</i> of values is specified, then those values are subtracted from the old set. For example, if the attribute value was the set <code>[a,b,c]</code> and the <i>DELETE</i> action specified <code>[a,c]</code>, then the final attribute value would be <code>[b]</code>. Specifying an empty set is an error.</p> </li> <li> <p><code>ADD</code> - If the attribute does not already exist, then the attribute and its values are added to the item. If the attribute does exist, then the behavior of <code>ADD</code> depends on the data type of the attribute:</p> <ul> <li> <p>If the existing attribute is a number, and if <i>Value</i> is also a number, then the <i>Value</i> is mathematically added to the existing attribute. If <i>Value</i> is a negative number, then it is subtracted from the existing attribute.</p> <note> <p> If you use <code>ADD</code> to increment or decrement a number value for an item that doesn&#39;t exist before the update, DynamoDB uses 0 as the initial value.</p> <p>In addition, if you use <code>ADD</code> to update an existing item, and intend to increment or decrement an attribute value which does not yet exist, DynamoDB uses <code>0</code> as the initial value. For example, suppose that the item you want to update does not yet have an attribute named <i>itemcount</i>, but you decide to <code>ADD</code> the number <code>3</code> to this attribute anyway, even though it currently does not exist. DynamoDB will create the <i>itemcount</i> attribute, set its initial value to <code>0</code>, and finally add <code>3</code> to it. The result will be a new <i>itemcount</i> attribute in the item, with a value of <code>3</code>.</p> </note> </li> <li> <p>If the existing data type is a set, and if the <i>Value</i> is also a set, then the <i>Value</i> is added to the existing set. (This is a <i>set</i> operation, not mathematical addition.) For example, if the attribute value was the set <code>[1,2]</code>, and the <code>ADD</code> action specified <code>[3]</code>, then the final attribute value would be <code>[1,2,3]</code>. An error occurs if an Add action is specified for a set attribute and the attribute type specified does not match the existing set type. </p> <p>Both sets must have the same primitive data type. For example, if the existing data type is a set of strings, the <i>Value</i> must also be a set of strings. The same holds true for number sets and binary sets.</p> </li> </ul> <p>This action is only valid for an existing attribute whose data type is number or is a set. Do not use <code>ADD</code> for any other data types.</p> </li> </ul> <p> <b>If no item with the specified <i>Key</i> is found:</b> </p> <ul> <li> <p><code>PUT</code> - DynamoDB creates a new item with the specified primary key, and then adds the attribute. </p> </li> <li> <p><code>DELETE</code> - Nothing happens; there is no attribute to delete.</p> </li> <li> <p><code>ADD</code> - DynamoDB creates an item with the supplied primary key and number (or set of numbers) for the attribute value. The only data types allowed are number and number set; no other data types can be specified.</p> </li> </ul></p>
+</div><span id='structfield.value'><code>value: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../rusoto/dynamodb/struct.AttributeValue.html' title='rusoto::dynamodb::AttributeValue'>AttributeValue</a>&gt;</code></span>
+                           <span class='stab '></span><h2 id='implementations'>Trait Implementations</h2><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='struct' href='../../rusoto/dynamodb/struct.AttributeValueUpdate.html' title='rusoto::dynamodb::AttributeValueUpdate'>AttributeValueUpdate</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-1288' class='srclink' href='../../src/rusoto/home/adimarco/code/rusoto/target/debug/build/rusoto-9b092785f15fdaf7/out/dynamodb.rs.html#918' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
+<div class='docblock'><p>Formats the value using the given formatter.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html' title='core::default::Default'>Default</a> for <a class='struct' href='../../rusoto/dynamodb/struct.AttributeValueUpdate.html' title='rusoto::dynamodb::AttributeValueUpdate'>AttributeValueUpdate</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-1295' class='srclink' href='../../src/rusoto/home/adimarco/code/rusoto/target/debug/build/rusoto-9b092785f15fdaf7/out/dynamodb.rs.html#918' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.default' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html#tymethod.default' class='fnname'>default</a>() -&gt; <a class='struct' href='../../rusoto/dynamodb/struct.AttributeValueUpdate.html' title='rusoto::dynamodb::AttributeValueUpdate'>AttributeValueUpdate</a></code></h4>
+<div class='docblock'><p>Returns the &quot;default value&quot; for a type. <a href="https://doc.rust-lang.org/nightly/core/default/trait.Default.html#tymethod.default">Read more</a></p>
+</div></div></section>
     <section id='search' class="content hidden"></section>
 
     <section class="footer"></section>
@@ -120,6 +84,8 @@ or is a set. Do not use <code>ADD</code> for any other data types.
                     <dd>Move down in search results</dd>
                     <dt>&#9166;</dt>
                     <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
                 </dl>
             </div>
 

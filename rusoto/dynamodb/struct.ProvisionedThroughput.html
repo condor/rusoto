@@ -11,6 +11,7 @@
 
     <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
     <link rel="stylesheet" type="text/css" href="../../main.css">
+    
 
     
     
@@ -43,33 +44,25 @@
 
     <section id='main' class="content struct">
 <h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>rusoto</a>::<wbr><a href='index.html'>dynamodb</a>::<wbr><a class='struct' href=''>ProvisionedThroughput</a></span><span class='out-of-band'><span id='render-detail'>
-            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
-                [<span class='inner'>&#x2212;</span>]
-            </a>
-        </span><a id='src-7055' class='srclink' href='../../src/rusoto///Users/jimmy/Code/rusoto/target/debug/build/rusoto-27b53b229e74877b/out/dynamodb.rs.html#13383-13396' title='goto source code'>[src]</a></span></h1>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-6564' class='srclink' href='../../src/rusoto/home/adimarco/code/rusoto/target/debug/build/rusoto-9b092785f15fdaf7/out/dynamodb.rs.html#11819-11828' title='goto source code'>[src]</a></span></h1>
 <pre class='rust struct'>pub struct ProvisionedThroughput {
-    pub WriteCapacityUnits: <a class='type' href='../../rusoto/dynamodb/type.PositiveLongObject.html' title='rusoto::dynamodb::PositiveLongObject'>PositiveLongObject</a>,
-    pub ReadCapacityUnits: <a class='type' href='../../rusoto/dynamodb/type.PositiveLongObject.html' title='rusoto::dynamodb::PositiveLongObject'>PositiveLongObject</a>,
-}</pre><div class='docblock'><p>Represents the provisioned throughput settings for a specified table or index.
-The settings can be modified using the <em>UpdateTable</em> operation.
-For current minimum and maximum provisioned throughput values, see <a href="ht%0Atp://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Limits.html">Limits</a> in
-the <em>Amazon DynamoDB Developer Guide</em>.</p>
-</div><h2 class='fields'>Fields</h2>
-<table><tr class='stab '>
-                                  <td id='structfield.WriteCapacityUnits'><code>WriteCapacityUnits</code></td><td><div class='docblock'><p>The maximum number of writes consumed per second before DynamoDB returns a
-<em>ThrottlingException</em>. For more information, see <a href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Wo%0ArkingWithTables.html#ProvisionedThroughput">Specifying Read and Write Re
-quirements</a> in the <em>Amazon DynamoDB Developer
-Guide</em>.</p>
-</div></td></tr><tr class='stab '>
-                                  <td id='structfield.ReadCapacityUnits'><code>ReadCapacityUnits</code></td><td><div class='docblock'><p>The maximum number of strongly consistent reads consumed per second before
-DynamoDB returns a <em>ThrottlingException</em>. For more information, see
-<a href="http://docs.aws.amazon.com/amazondyna%0Amodb/latest/developerguide/WorkingWithTables.html#ProvisionedThroughput">Specifying Read and Write Requirements</a> in
-the <em>Amazon DynamoDB Developer Guide</em>.</p>
-</div></td></tr></table><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><code>impl <a class='trait' href='https://serde-rs.github.io/serde/serde/serde/ser/trait.Serialize.html' title='serde::ser::Serialize'>Serialize</a> for <a class='struct' href='../../rusoto/dynamodb/struct.ProvisionedThroughput.html' title='rusoto::dynamodb::ProvisionedThroughput'>ProvisionedThroughput</a></code></h3><div class='impl-items'><h4 id='method.serialize' class='method'><code>fn <a href='https://serde-rs.github.io/serde/serde/serde/ser/trait.Serialize.html#method.serialize' class='fnname'>serialize</a>&lt;__S&gt;(&amp;self, serializer: &amp;mut __S) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>, __S::Error&gt; <span class='where'>where __S: <a class='trait' href='https://serde-rs.github.io/serde/serde/serde/ser/trait.Serializer.html' title='serde::ser::Serializer'>Serializer</a></span></code></h4>
-</div><h3 class='impl'><code>impl <a class='trait' href='https://serde-rs.github.io/serde/serde/serde/de/trait.Deserialize.html' title='serde::de::Deserialize'>Deserialize</a> for <a class='struct' href='../../rusoto/dynamodb/struct.ProvisionedThroughput.html' title='rusoto::dynamodb::ProvisionedThroughput'>ProvisionedThroughput</a></code></h3><div class='impl-items'><h4 id='method.deserialize' class='method'><code>fn <a href='https://serde-rs.github.io/serde/serde/serde/de/trait.Deserialize.html#method.deserialize' class='fnname'>deserialize</a>&lt;__D&gt;(deserializer: &amp;mut __D) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a class='struct' href='../../rusoto/dynamodb/struct.ProvisionedThroughput.html' title='rusoto::dynamodb::ProvisionedThroughput'>ProvisionedThroughput</a>, __D::Error&gt; <span class='where'>where __D: <a class='trait' href='https://serde-rs.github.io/serde/serde/serde/de/trait.Deserializer.html' title='serde::de::Deserializer'>Deserializer</a></span></code></h4>
-</div><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html' title='core::default::Default'>Default</a> for <a class='struct' href='../../rusoto/dynamodb/struct.ProvisionedThroughput.html' title='rusoto::dynamodb::ProvisionedThroughput'>ProvisionedThroughput</a></code></h3><div class='impl-items'><h4 id='method.default' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html#method.default' class='fnname'>default</a>() -&gt; <a class='struct' href='../../rusoto/dynamodb/struct.ProvisionedThroughput.html' title='rusoto::dynamodb::ProvisionedThroughput'>ProvisionedThroughput</a></code></h4>
-</div><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='struct' href='../../rusoto/dynamodb/struct.ProvisionedThroughput.html' title='rusoto::dynamodb::ProvisionedThroughput'>ProvisionedThroughput</a></code></h3><div class='impl-items'><h4 id='method.fmt' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#method.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
-</div></section>
+    pub read_capacity_units: <a class='type' href='../../rusoto/dynamodb/type.PositiveLongObject.html' title='rusoto::dynamodb::PositiveLongObject'>PositiveLongObject</a>,
+    pub write_capacity_units: <a class='type' href='../../rusoto/dynamodb/type.PositiveLongObject.html' title='rusoto::dynamodb::PositiveLongObject'>PositiveLongObject</a>,
+}</pre><div class='docblock'><p>Represents the provisioned throughput settings for a specified table or index. The settings can be modified using the <i>UpdateTable</i> operation.</p> <p>For current minimum and maximum provisioned throughput values, see <a href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Limits.html">Limits</a> in the <i>Amazon DynamoDB Developer Guide</i>.</p>
+</div><h2 class='fields'>Fields</h2><span id='structfield.read_capacity_units'><code>read_capacity_units: <a class='type' href='../../rusoto/dynamodb/type.PositiveLongObject.html' title='rusoto::dynamodb::PositiveLongObject'>PositiveLongObject</a></code></span>
+                           <span class='stab '></span><div class='docblock'><p>The maximum number of strongly consistent reads consumed per second before DynamoDB returns a <i>ThrottlingException</i>. For more information, see <a href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/WorkingWithTables.html#ProvisionedThroughput">Specifying Read and Write Requirements</a> in the <i>Amazon DynamoDB Developer Guide</i>.</p>
+</div><span id='structfield.write_capacity_units'><code>write_capacity_units: <a class='type' href='../../rusoto/dynamodb/type.PositiveLongObject.html' title='rusoto::dynamodb::PositiveLongObject'>PositiveLongObject</a></code></span>
+                           <span class='stab '></span><div class='docblock'><p>The maximum number of writes consumed per second before DynamoDB returns a <i>ThrottlingException</i>. For more information, see <a href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/WorkingWithTables.html#ProvisionedThroughput">Specifying Read and Write Requirements</a> in the <i>Amazon DynamoDB Developer Guide</i>.</p>
+</div><h2 id='implementations'>Trait Implementations</h2><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='struct' href='../../rusoto/dynamodb/struct.ProvisionedThroughput.html' title='rusoto::dynamodb::ProvisionedThroughput'>ProvisionedThroughput</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-6567' class='srclink' href='../../src/rusoto/home/adimarco/code/rusoto/target/debug/build/rusoto-9b092785f15fdaf7/out/dynamodb.rs.html#11818' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
+<div class='docblock'><p>Formats the value using the given formatter.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html' title='core::default::Default'>Default</a> for <a class='struct' href='../../rusoto/dynamodb/struct.ProvisionedThroughput.html' title='rusoto::dynamodb::ProvisionedThroughput'>ProvisionedThroughput</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-6574' class='srclink' href='../../src/rusoto/home/adimarco/code/rusoto/target/debug/build/rusoto-9b092785f15fdaf7/out/dynamodb.rs.html#11818' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.default' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html#tymethod.default' class='fnname'>default</a>() -&gt; <a class='struct' href='../../rusoto/dynamodb/struct.ProvisionedThroughput.html' title='rusoto::dynamodb::ProvisionedThroughput'>ProvisionedThroughput</a></code></h4>
+<div class='docblock'><p>Returns the &quot;default value&quot; for a type. <a href="https://doc.rust-lang.org/nightly/core/default/trait.Default.html#tymethod.default">Read more</a></p>
+</div></div></section>
     <section id='search' class="content hidden"></section>
 
     <section class="footer"></section>
@@ -92,6 +85,8 @@ the <em>Amazon DynamoDB Developer Guide</em>.</p>
                     <dd>Move down in search results</dd>
                     <dt>&#9166;</dt>
                     <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
                 </dl>
             </div>
 

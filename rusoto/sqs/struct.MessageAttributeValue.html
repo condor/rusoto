@@ -11,6 +11,7 @@
 
     <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
     <link rel="stylesheet" type="text/css" href="../../main.css">
+    
 
     
     
@@ -43,41 +44,34 @@
 
     <section id='main' class="content struct">
 <h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>rusoto</a>::<wbr><a href='index.html'>sqs</a>::<wbr><a class='struct' href=''>MessageAttributeValue</a></span><span class='out-of-band'><span id='render-detail'>
-            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
-                [<span class='inner'>&#x2212;</span>]
-            </a>
-        </span><a id='src-30131' class='srclink' href='../../src/rusoto///Users/jimmy/Code/rusoto/target/debug/build/rusoto-27b53b229e74877b/out/sqs.rs.html#84-101' title='goto source code'>[src]</a></span></h1>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-106004' class='srclink' href='../../src/rusoto/home/adimarco/code/rusoto/target/debug/build/rusoto-9b092785f15fdaf7/out/sqs.rs.html#2188-2207' title='goto source code'>[src]</a></span></h1>
 <pre class='rust struct'>pub struct MessageAttributeValue {
     pub binary_list_values: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/sqs/type.BinaryList.html' title='rusoto::sqs::BinaryList'>BinaryList</a>&gt;,
-    pub string_value: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;,
-    pub data_type: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>,
     pub binary_value: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/sqs/type.Binary.html' title='rusoto::sqs::Binary'>Binary</a>&gt;,
+    pub data_type: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>,
     pub string_list_values: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/sqs/type.StringList.html' title='rusoto::sqs::StringList'>StringList</a>&gt;,
-}</pre><div class='docblock'><p>The user-specified message attribute value. For string data types, the value
-attribute has the same restrictions on the content as the message body. For
-more information, see <a href="http://docs.aws.amazon.com/AWSSimpleQueueS%0Aervice/latest/APIReference/API_SendMessage.html">SendMessage</a>.
-Name, type, and value must not be empty or null. In addition, the message body
-should not be empty or null. All parts of the message attribute, including
-name, type, and value, are included in the message size restriction, which is
-currently 256 KB (262,144 bytes).</p>
-</div><h2 class='fields'>Fields</h2>
-<table><tr class='stab '>
-                                  <td id='structfield.binary_list_values'><code>binary_list_values</code></td><td><div class='docblock'><p>Not implemented. Reserved for future use.</p>
-</div></td></tr><tr class='stab '>
-                                  <td id='structfield.string_value'><code>string_value</code></td><td><div class='docblock'><p>Strings are Unicode with UTF8 binary encoding. For a list of code values, see
-<a href="http://en.wikipedia.org/wiki/ASCII#ASCII_printable_characters">http://en.wikipedia.org/wiki/ASCII#ASCII_printable_characters</a>.</p>
-</div></td></tr><tr class='stab '>
-                                  <td id='structfield.data_type'><code>data_type</code></td><td><div class='docblock'><p>Amazon SQS supports the following logical data types: String, Number, and
-Binary. In addition, you can append your own custom labels. For more
-information, see <a href="http://docs.aws.amazon.com/AWS%0ASimpleQueueService/latest/SQSDeveloperGuide/SQSMessageAttributes.html#SQSMessa%0AgeAttributes.DataTypes">Message Attribute Data Types</a>.</p>
-</div></td></tr><tr class='stab '>
-                                  <td id='structfield.binary_value'><code>binary_value</code></td><td><div class='docblock'><p>Binary type attributes can store any binary data, for example, compressed
-data, encrypted data, or images.</p>
-</div></td></tr><tr class='stab '>
-                                  <td id='structfield.string_list_values'><code>string_list_values</code></td><td><div class='docblock'><p>Not implemented. Reserved for future use.</p>
-</div></td></tr></table><h2 id='implementations'>Trait Implementations</h2><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html' title='core::default::Default'>Default</a> for <a class='struct' href='../../rusoto/sqs/struct.MessageAttributeValue.html' title='rusoto::sqs::MessageAttributeValue'>MessageAttributeValue</a></code></h3><div class='impl-items'><h4 id='method.default' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html#method.default' class='fnname'>default</a>() -&gt; <a class='struct' href='../../rusoto/sqs/struct.MessageAttributeValue.html' title='rusoto::sqs::MessageAttributeValue'>MessageAttributeValue</a></code></h4>
-</div><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='struct' href='../../rusoto/sqs/struct.MessageAttributeValue.html' title='rusoto::sqs::MessageAttributeValue'>MessageAttributeValue</a></code></h3><div class='impl-items'><h4 id='method.fmt' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#method.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
-</div></section>
+    pub string_value: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;,
+}</pre><div class='docblock'><p>The user-specified message attribute value. For string data types, the value attribute has the same restrictions on the content as the message body. For more information, see <a href="http://docs.aws.amazon.com/AWSSimpleQueueService/latest/APIReference/API_SendMessage.html">SendMessage</a>.</p> <p>Name, type, and value must not be empty or null. In addition, the message body should not be empty or null. All parts of the message attribute, including name, type, and value, are included in the message size restriction, which is currently 256 KB (262,144 bytes).</p>
+</div><h2 class='fields'>Fields</h2><span id='structfield.binary_list_values'><code>binary_list_values: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/sqs/type.BinaryList.html' title='rusoto::sqs::BinaryList'>BinaryList</a>&gt;</code></span>
+                           <span class='stab '></span><div class='docblock'><p>Not implemented. Reserved for future use.</p>
+</div><span id='structfield.binary_value'><code>binary_value: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/sqs/type.Binary.html' title='rusoto::sqs::Binary'>Binary</a>&gt;</code></span>
+                           <span class='stab '></span><div class='docblock'><p>Binary type attributes can store any binary data, for example, compressed data, encrypted data, or images.</p>
+</div><span id='structfield.data_type'><code>data_type: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a></code></span>
+                           <span class='stab '></span><div class='docblock'><p>Amazon SQS supports the following logical data types: String, Number, and Binary. In addition, you can append your own custom labels. For more information, see <a href="http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/SQSMessageAttributes.html#SQSMessageAttributes.DataTypes">Message Attribute Data Types</a>.</p>
+</div><span id='structfield.string_list_values'><code>string_list_values: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/sqs/type.StringList.html' title='rusoto::sqs::StringList'>StringList</a>&gt;</code></span>
+                           <span class='stab '></span><div class='docblock'><p>Not implemented. Reserved for future use.</p>
+</div><span id='structfield.string_value'><code>string_value: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;</code></span>
+                           <span class='stab '></span><div class='docblock'><p>Strings are Unicode with UTF8 binary encoding. For a list of code values, see <a href="http://en.wikipedia.org/wiki/ASCII#ASCII_printable_characters">http://en.wikipedia.org/wiki/ASCII#ASCII_printable_characters</a>.</p>
+</div><h2 id='implementations'>Trait Implementations</h2><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='struct' href='../../rusoto/sqs/struct.MessageAttributeValue.html' title='rusoto::sqs::MessageAttributeValue'>MessageAttributeValue</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-106010' class='srclink' href='../../src/rusoto/home/adimarco/code/rusoto/target/debug/build/rusoto-9b092785f15fdaf7/out/sqs.rs.html#2187' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
+<div class='docblock'><p>Formats the value using the given formatter.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html' title='core::default::Default'>Default</a> for <a class='struct' href='../../rusoto/sqs/struct.MessageAttributeValue.html' title='rusoto::sqs::MessageAttributeValue'>MessageAttributeValue</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-106020' class='srclink' href='../../src/rusoto/home/adimarco/code/rusoto/target/debug/build/rusoto-9b092785f15fdaf7/out/sqs.rs.html#2187' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.default' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html#tymethod.default' class='fnname'>default</a>() -&gt; <a class='struct' href='../../rusoto/sqs/struct.MessageAttributeValue.html' title='rusoto::sqs::MessageAttributeValue'>MessageAttributeValue</a></code></h4>
+<div class='docblock'><p>Returns the &quot;default value&quot; for a type. <a href="https://doc.rust-lang.org/nightly/core/default/trait.Default.html#tymethod.default">Read more</a></p>
+</div></div></section>
     <section id='search' class="content hidden"></section>
 
     <section class="footer"></section>
@@ -100,6 +94,8 @@ data, encrypted data, or images.</p>
                     <dd>Move down in search results</dd>
                     <dt>&#9166;</dt>
                     <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
                 </dl>
             </div>
 

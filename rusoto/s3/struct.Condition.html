@@ -11,6 +11,7 @@
 
     <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
     <link rel="stylesheet" type="text/css" href="../../main.css">
+    
 
     
     
@@ -43,31 +44,34 @@
 
     <section id='main' class="content struct">
 <h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>rusoto</a>::<wbr><a href='index.html'>s3</a>::<wbr><a class='struct' href=''>Condition</a></span><span class='out-of-band'><span id='render-detail'>
-            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
-                [<span class='inner'>&#x2212;</span>]
-            </a>
-        </span><a id='src-39512' class='srclink' href='../../src/rusoto///Users/jimmy/Code/rusoto/codegen/s3.rs.html#6595-6610' title='goto source code'>[src]</a></span></h1>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-99150' class='srclink' href='../../src/rusoto/src/s3.rs.html#6623-6638' title='goto source code'>[src]</a></span></h1>
 <pre class='rust struct'>pub struct Condition {
     pub http_error_code_returned_equals: <a class='type' href='../../rusoto/s3/type.HttpErrorCodeReturnedEquals.html' title='rusoto::s3::HttpErrorCodeReturnedEquals'>HttpErrorCodeReturnedEquals</a>,
     pub key_prefix_equals: <a class='type' href='../../rusoto/s3/type.KeyPrefixEquals.html' title='rusoto::s3::KeyPrefixEquals'>KeyPrefixEquals</a>,
-}</pre><h2 class='fields'>Fields</h2>
-<table><tr class='stab '>
-                                  <td id='structfield.http_error_code_returned_equals'><code>http_error_code_returned_equals</code></td><td><div class='docblock'><p>The HTTP error code when the redirect is applied. In the event of an error, if
+}</pre><h2 class='fields'>Fields</h2><span id='structfield.http_error_code_returned_equals'><code>http_error_code_returned_equals: <a class='type' href='../../rusoto/s3/type.HttpErrorCodeReturnedEquals.html' title='rusoto::s3::HttpErrorCodeReturnedEquals'>HttpErrorCodeReturnedEquals</a></code></span>
+                           <span class='stab '></span><div class='docblock'><p>The HTTP error code when the redirect is applied. In the event of an error, if
 the error code equals this value, then the specified redirect is applied.
 Required when parent element Condition is specified and sibling
 KeyPrefixEquals is not specified. If both are specified, then both must be
 true for the redirect to be applied.</p>
-</div></td></tr><tr class='stab '>
-                                  <td id='structfield.key_prefix_equals'><code>key_prefix_equals</code></td><td><div class='docblock'><p>The object key name prefix when the redirect is applied. For example, to
+</div><span id='structfield.key_prefix_equals'><code>key_prefix_equals: <a class='type' href='../../rusoto/s3/type.KeyPrefixEquals.html' title='rusoto::s3::KeyPrefixEquals'>KeyPrefixEquals</a></code></span>
+                           <span class='stab '></span><div class='docblock'><p>The object key name prefix when the redirect is applied. For example, to
 redirect requests for ExamplePage.html, the key prefix will be
 ExamplePage.html. To redirect request for all pages with the prefix docs/, the
 key prefix will be /docs, which identifies all objects in the docs/ folder.
 Required when the parent element Condition is specified and sibling
 HttpErrorCodeReturnedEquals is not specified. If both conditions are
 specified, both must be true for the redirect to be applied.</p>
-</div></td></tr></table><h2 id='implementations'>Trait Implementations</h2><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html' title='core::default::Default'>Default</a> for <a class='struct' href='../../rusoto/s3/struct.Condition.html' title='rusoto::s3::Condition'>Condition</a></code></h3><div class='impl-items'><h4 id='method.default' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html#method.default' class='fnname'>default</a>() -&gt; <a class='struct' href='../../rusoto/s3/struct.Condition.html' title='rusoto::s3::Condition'>Condition</a></code></h4>
-</div><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='struct' href='../../rusoto/s3/struct.Condition.html' title='rusoto::s3::Condition'>Condition</a></code></h3><div class='impl-items'><h4 id='method.fmt' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#method.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
-</div></section>
+</div><h2 id='implementations'>Trait Implementations</h2><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html' title='core::default::Default'>Default</a> for <a class='struct' href='../../rusoto/s3/struct.Condition.html' title='rusoto::s3::Condition'>Condition</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-99153' class='srclink' href='../../src/rusoto/src/s3.rs.html#6622' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.default' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html#tymethod.default' class='fnname'>default</a>() -&gt; <a class='struct' href='../../rusoto/s3/struct.Condition.html' title='rusoto::s3::Condition'>Condition</a></code></h4>
+<div class='docblock'><p>Returns the &quot;default value&quot; for a type. <a href="https://doc.rust-lang.org/nightly/core/default/trait.Default.html#tymethod.default">Read more</a></p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='struct' href='../../rusoto/s3/struct.Condition.html' title='rusoto::s3::Condition'>Condition</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-99155' class='srclink' href='../../src/rusoto/src/s3.rs.html#6622' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
+<div class='docblock'><p>Formats the value using the given formatter.</p>
+</div></div></section>
     <section id='search' class="content hidden"></section>
 
     <section class="footer"></section>
@@ -90,6 +94,8 @@ specified, both must be true for the redirect to be applied.</p>
                     <dd>Move down in search results</dd>
                     <dt>&#9166;</dt>
                     <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
                 </dl>
             </div>
 
